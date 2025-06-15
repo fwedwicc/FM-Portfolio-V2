@@ -1,11 +1,21 @@
 import React from 'react'
+import { BrowserRouter, Routes, Route, useLocation } from 'react-router-dom'
+import { Home } from './pages'
 
 const App = () => {
   return (
-    <div>
-      <h1>Hello</h1>
-    </div>
+    <Routes>
+      <Route path='/' element={<Home />} />
+    </Routes>
   )
 }
 
-export default App
+const AppWrapper = () => {
+  return (
+    <BrowserRouter>
+      <App />
+    </BrowserRouter>
+  )
+}
+
+export default AppWrapper
