@@ -18,7 +18,7 @@ const Hero = () => {
           trigger: logoRef.current,
           start: 'top center',
           end: 'bottom top',
-          scrub: true,
+          scrub: 1,
         },
       }
     )

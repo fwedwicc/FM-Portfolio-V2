@@ -6,7 +6,6 @@ gsap.registerPlugin(ScrollTrigger)
 
 const About = () => {
   const sectionRef = useRef(null)
-  const contentRefs = useRef([])
 
   useEffect(() => {
     const el = sectionRef.current
@@ -17,65 +16,70 @@ const About = () => {
       { y: 100 },
       {
         y: -180,
+        ease: 'none',
+        duration: 3,
         scrollTrigger: {
           trigger: el,
+          toggleActions: 'restart pause reverse pause',
           start: 'top bottom',
           end: 'bottom top',
-          scrub: true,
+          scrub: 1,
           markers: false,
         },
       }
     )
 
-    // Animate content blocks: scale and fade in
-    contentRefs.current.forEach((content) => {
-      gsap.fromTo(
-        content,
-        { scale: 0.5, opacity: 0 },
-        {
-          scale: 1,
-          opacity: 1,
-          scrollTrigger: {
-            trigger: content,
-            start: 'top 190%',
-            end: 'bottom 85%',
-            scrub: true,
-            markers: true,
-          },
-        }
-      )
-    })
+    gsap.fromTo(
+      '#box-1',
+      { x: -40, opacity: 0 },
+      {
+        x: 0,
+        opacity: 1,
+        ease: 'none',
+        duration: 3,
+        scrollTrigger: {
+          trigger: '#box-1',
+          scrub: 1,
+          markers: true,
+          start: 'top 110%',
+          end: 'bottom 80%',
+        },
+      }
+    )
+    gsap.fromTo(
+      '#box-2',
+      { x: 40, opacity: 0 },
+      {
+        x: 0,
+        opacity: 1,
+        ease: 'none',
+        duration: 3,
+        scrollTrigger: {
+          trigger: '#box-2',
+          scrub: 1,
+          markers: true,
+          start: 'top 110%',
+          end: 'bottom 80%',
+        },
+      }
+    )
+
   }, [])
 
-  // Push each ref to contentRefs array only once
-  const addToRefs = (el) => {
-    if (el && !contentRefs.current.includes(el)) {
-      contentRefs.current.push(el)
-    }
-  }
-
   return (
-    <section ref={sectionRef} className='px-30 py-30 border border-amber-500 bg-amber-500/20'>
-      <div className='grid grid-cols-3 border p-4'>
-        <div ref={addToRefs} className='col-span-2 border'>
-          <h1>About Section</h1>
-          <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit... Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla veritatis quaerat quas inventore officia saepe optio eum maiores tenetur voluptatem, minus debitis aut vitae, laudantium, quo ea totam architecto sit? Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt adipisci sequi nostrum commodi dolores aperiam, cupiditate corrupti reprehenderit impedit officia assumenda quo eligendi nulla expedita placeat vitae</p>
+    <section ref={sectionRef} className='px-48 py-30 border border-amber-500 bg-amber-500/20'>
+      <div className='grid grid-cols-3 p-3 gap-4'>
+        <div id='box-1' className='col-span-2 border py-24'>
+          hello
         </div>
-        <div ref={addToRefs} className='border'>
-          <h1>About Section</h1>
-          <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit... Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla veritatis quaerat quas inventore officia saepe optio eum maiores tenetur voluptatem, minus debitis aut vitae, laudantium, quo ea totam architecto sit? Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt adipisci sequi nostrum commodi dolores aperiam, cupiditate corrupti reprehenderit impedit officia assumenda quo eligendi nulla expedita placeat vitae</p>
+        <div id='box-2' className='border py-24'>
+          hello
         </div>
-        <div ref={addToRefs} className='border'>
-          <h1>About Section</h1>
-          <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit... Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla veritatis quaerat quas inventore officia saepe optio eum maiores tenetur voluptatem, minus debitis aut vitae, laudantium, quo ea totam architecto sit? Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt adipisci sequi nostrum commodi dolores aperiam, cupiditate corrupti reprehenderit impedit officia assumenda quo eligendi nulla expedita placeat vitae</p>
+        <div id='box-1' className='border py-24'>
+          hello
         </div>
-        <div ref={addToRefs} className='border'>
-          <h1>About Section</h1>
-          <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit... Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla veritatis quaerat quas inventore officia saepe optio eum maiores tenetur voluptatem, minus debitis aut vitae, laudantium, quo ea totam architecto sit? Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt adipisci sequi nostrum commodi dolores aperiam, cupiditate corrupti reprehenderit impedit officia assumenda quo eligendi nulla expedita placeat vitae</p>
-        </div>
-        <div ref={addToRefs} className='border'>
-          <h1>About Section</h1>
-          <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit... Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla veritatis quaerat quas inventore officia saepe optio eum maiores tenetur voluptatem, minus debitis aut vitae, laudantium, quo ea totam architecto sit? Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt adipisci sequi nostrum commodi dolores aperiam, cupiditate corrupti reprehenderit impedit officia assumenda quo eligendi nulla expedita placeat vitae</p>
+        <div id='box-2' className='col-span-2 border py-24'>
+          hello
         </div>
       </div>
     </section>
