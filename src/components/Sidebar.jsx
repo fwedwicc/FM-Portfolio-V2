@@ -13,7 +13,7 @@ const scrollToSection = (e, target) => {
 
 const Sidebar = () => {
 
-  const active = useActiveSection(['home', 'about', 'services', 'contact'])
+  const active = useActiveSection(['home', 'about', 'experience'])
 
   const navItems = [
     { id: 'home', label: 'Home', icon: <RiHome5Line className='size-5' /> },

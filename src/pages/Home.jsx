@@ -7,12 +7,13 @@ const Home = () => {
 
   return (
     <>
-    <Sidebar />
-    <main>
-      <Hero />
-      <About />
-      <Tester />
-    </main>
+      <Sidebar />
+      <main>
+        <Hero />
+        <About />
+        <Tester />
+        <Tester />
+      </main>
     </>
   )
 }

@@ -1,15 +1,28 @@
 @import "tailwindcss";
 
 @font-face {
-  font-family: 'Poppins';
-  src: url('/fonts/Poppins-Regular.ttf') format('truetype');
+  font-family: "Poppins";
+  src: url("/fonts/Poppins-Regular.ttf") format("truetype");
   font-weight: auto;
   font-style: normal;
 }
 
 body {
   @apply bg-[#15131C] overflow-x-hidden;
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
+}
+
+@keyframes spin-slow-gradient {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.animate-spin-gradient {
+  animation: spin-slow-gradient 8s linear infinite;
 }
 
 /* Smooth Transition */
@@ -22,7 +35,7 @@ body {
   box-shadow: 0px 100px 250px 0px rgba(98, 96, 222, 0.24);
 }
 h1 {
-  background: linear-gradient(0deg, #433CB8 -20.26%, #D3D2FF 100.16%);
+  background: linear-gradient(0deg, #433cb8 -20.26%, #d3d2ff 100.16%);
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;

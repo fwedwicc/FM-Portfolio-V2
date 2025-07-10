@@ -13,7 +13,7 @@ export default function useActiveSection(sectionIds = []) {
       },
       {
         rootMargin: '0px 0px -50% 0px',
-        threshold: 0.5,
+        threshold: 0.4,
       }
     )
 
