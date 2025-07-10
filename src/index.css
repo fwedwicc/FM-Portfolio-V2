@@ -8,5 +8,18 @@
 }
 
 body {
+  @apply bg-[#15131C];
   font-family: 'Poppins', sans-serif;
+}
+
+/* Hero */
+#hero-logo {
+  box-shadow: 0px 100px 250px 0px rgba(98, 96, 222, 0.24);
+}
+
+h1 {
+  background: linear-gradient(0deg, #433CB8 -20.26%, #D3D2FF 100.16%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }

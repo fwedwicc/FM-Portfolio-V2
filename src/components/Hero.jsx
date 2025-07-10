@@ -2,6 +2,7 @@ import React, { useRef, useEffect } from 'react'
 import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import { FaBehance, FaDribbble, FaLinkedinIn, FaGithub } from "react-icons/fa"
+import {FMLogo} from '../assets'
 
 gsap.registerPlugin(ScrollTrigger)
 
@@ -112,9 +113,14 @@ const Hero = () => {
     <>
       <Header />
       <section className='h-screen border border-red-500' id='home'>
-        <div className='flex flex-col items-center justify-center h-full gap-[60px] border'>
-          <div ref={logoRef} className='size-[300px] rounded-[70px] border'></div>
-          <h1 id='heading-1' className='text-[80px] text-center leading-none font-thin'>i design and build</h1>
+        <div className='flex flex-col items-center justify-center h-full gap-[50px] border'>
+          {/* Logo */}
+          <div id='hero-logo' ref={logoRef} className='size-[300px] rounded-[70px] p-[2px] bg-gradient-to-b from-[#BFADEF] to-[#4F46E5] overflow-hidden'>
+            <div className='grid place-content-center w-full h-full bg-[#191726] rounded-[69px]'>
+              <img src={FMLogo} alt="FM Logo" className='w-[73px] h-auto' />
+            </div>
+          </div>
+          <h1 id='heading-1' className='text-[80px] text-center'>i design and build</h1>
         </div>
       </section>
     </>
