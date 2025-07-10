@@ -40,7 +40,7 @@ const About = () => {
         scrollTrigger: {
           trigger: '#box-1',
           scrub: 1,
-          markers: true,
+          markers: false,
           start: 'top 110%',
           end: 'bottom 80%',
         },
@@ -57,7 +57,7 @@ const About = () => {
         scrollTrigger: {
           trigger: '#box-2',
           scrub: 1,
-          markers: true,
+          markers: false,
           start: 'top 110%',
           end: 'bottom 80%',
         },
@@ -67,7 +67,7 @@ const About = () => {
   }, [])
 
   return (
-    <section ref={sectionRef} className='px-48 py-30 border border-amber-500 bg-amber-500/20'>
+    <section ref={sectionRef} className='px-48 py-30 border border-amber-500 bg-amber-500/20' id='about'>
       <div className='grid grid-cols-3 p-3 gap-4'>
         <div id='box-1' className='col-span-2 border py-24'>
           hello

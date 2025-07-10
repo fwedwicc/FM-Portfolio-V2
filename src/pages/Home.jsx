@@ -1,13 +1,19 @@
 import React from 'react'
-import { Hero, About, Tester } from '../components'
+import useLenis from '../hooks/useLenis.js'
+import { Hero, About, Tester, Sidebar } from '../components'
 
 const Home = () => {
+  useLenis()
+
   return (
+    <>
+    <Sidebar />
     <main>
       <Hero />
       <About />
       <Tester />
     </main>
+    </>
   )
 }
 

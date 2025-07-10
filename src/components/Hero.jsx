@@ -25,14 +25,12 @@ const Hero = () => {
   }, [])
 
   return (
-    <section className='relative h-screen border border-red-500'>
+    <section className='relative h-screen border border-red-500' id='home'>
       <h1>Hero section</h1>
       <header>
-
       </header>
       {/* Logo */}
-      <div ref={logoRef} className='absolute -translate-y-1/2 -translate-x-1/2 top-1/2 left-1/2 size-44 rounded-4xl border'>
-
+      <div ref={logoRef} className='absolute -translate-y-1/2 -translate-x-1/2 top-1/2 left-1/2 size-[300px] rounded-[70px] border'>
       </div>
     </section>
   )
