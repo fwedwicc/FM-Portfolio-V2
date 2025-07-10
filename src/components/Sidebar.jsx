@@ -24,12 +24,12 @@ const Sidebar = () => {
   ]
 
   return (
-    <aside className='px-10 border fixed h-screen flex items-center z-50'>
-      <div className='flex flex-col gap-1 border p-1 rounded-[16px]'>
+    <aside className='px-10 border border-green-500/20 fixed h-screen flex items-center'>
+      <div className='flex flex-col gap-1 border p-1 rounded-[16px] z-50'>
        {navItems.map(({ id, icon, label }) => (
           <div className='inline-flex group relative' key={id}>
             <a href={`#${id}`} onClick={(e) => scrollToSection(e, `#${id}`)}
-              className={`p-3.5 rounded-[14px] border transition-colors ${
+              className={`p-3.5 rounded-[14px] border transition-colors ease-in-out duration-300 ${
                 active === id ? 'border-red-500' : 'border-black'
               }`}
             >

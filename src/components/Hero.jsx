@@ -2,7 +2,8 @@ import React, { useRef, useEffect } from 'react'
 import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import { FaBehance, FaDribbble, FaLinkedinIn, FaGithub } from "react-icons/fa"
-import {FMLogo} from '../assets'
+import { FMLogo } from '../assets'
+import { HeroGrid, HeroGlow } from '../assets/hero'
 
 gsap.registerPlugin(ScrollTrigger)
 
@@ -76,28 +77,27 @@ const Hero = () => {
     )
   }, [])
 
+  // Header Component
    const Header = () => {
     return (
-      <header className='absolute p-10 w-full border'>
+      <header className='absolute p-10 w-full border border-green-500/20 z-50'>
        <div className='relative flex justify-between items-center'>
          {/* Social Links */}
-        <div id='social-links' className='flex items-center gap-4'>
-          <div className='grid place-items-center size-7 rounded-md'>
-            <FaLinkedinIn className='size-4.5' />
-          </div>
-          <div className='grid place-items-center size-7 rounded-md'>
-            <FaGithub className='size-4.5' />
-          </div>
-          <div className='grid place-items-center size-7 rounded-md'>
-            <FaBehance className='size-4.5' />
-          </div>
-            <div className='grid place-items-center size-7 rounded-md'>
-            <FaDribbble className='size-4.5' />
-          </div>
+          <div id='social-links' className='flex items-center gap-4'>
+          {[
+            { icon: FaLinkedinIn, link: 'https://www.linkedin.com/in/yourprofile' },
+            { icon: FaGithub, link: 'https://www.linkedin.com/in/yourprofile' },
+            { icon: FaBehance, link: 'https://www.linkedin.com/in/yourprofile' },
+            { icon: FaDribbble, link: 'https://www.linkedin.com/in/yourprofile' },
+          ].map((item, index) => (
+            <div className='grid place-items-center size-7 group rounded-md hover:bg-indigo-400/10 transition-smooth' key={index}> 
+              <item.icon className='size-4 group-hover:text-indigo-300 text-indigo-100 transition-smooth' />
+            </div>
+          ))}
           </div> 
           {/* Credit */}
           <div className='absolute -translate-x-1/2 left-1/2'>
-            FM @ 2025
+            <span className='text-indigo-100 text-sm'>FM © 2025</span>
           </div>
           {/* CTAs */}
           <div id='CTAs' className='flex gap-1 p-1 border rounded-[13px]'>
@@ -112,14 +112,19 @@ const Hero = () => {
   return (
     <>
       <Header />
-      <section className='h-screen border border-red-500' id='home'>
+      <section className='h-screen' id='home'>
+        {/* Glow */}
+        <img src={HeroGlow} alt="Glow" className='absolute w-auto border border-green-500/20 top-0 transform -translate-x-1/2 left-1/2 z-10' />
+        {/* Grid */}
+        <img src={HeroGrid} alt="Grid" className='absolute h-screen w-auto border border-green-500/20 transform -translate-x-1/2 left-1/2 -z-10' />
+        {/* Logo Container */}
         <div className='flex flex-col items-center justify-center h-full gap-[50px] border'>
-          {/* Logo */}
           <div id='hero-logo' ref={logoRef} className='size-[300px] rounded-[70px] p-[2px] bg-gradient-to-b from-[#BFADEF] to-[#4F46E5] overflow-hidden'>
             <div className='grid place-content-center w-full h-full bg-[#191726] rounded-[69px]'>
               <img src={FMLogo} alt="FM Logo" className='w-[73px] h-auto' />
             </div>
           </div>
+          {/* Heading */}
           <h1 id='heading-1' className='text-[80px] text-center'>i design and build</h1>
         </div>
       </section>
