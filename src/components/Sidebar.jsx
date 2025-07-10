@@ -13,7 +13,7 @@ const scrollToSection = (e, target) => {
 
 const Sidebar = () => {
 
-   const active = useActiveSection(['home', 'about', 'services', 'contact'])
+  const active = useActiveSection(['home', 'about', 'services', 'contact'])
 
   const navItems = [
     { id: 'home', label: 'Home', icon: <RiHome5Line className='size-5' /> },
@@ -24,19 +24,20 @@ const Sidebar = () => {
   ]
 
   return (
-    <aside className='px-10 border border-green-500/20 fixed h-screen flex items-center'>
-      <div className='flex flex-col gap-1 border p-1 rounded-[16px] z-50'>
-       {navItems.map(({ id, icon, label }) => (
-          <div className='inline-flex group relative' key={id}>
+    <aside className='px-6 border border-green-500/20 fixed h-screen flex items-center z-50'>
+      <div className='flex flex-col gap-1 border border-[#262333] bg-[#15131C] p-1 rounded-[16px]'>
+        {navItems.map(({ id, icon, label }) => (
+          <div className='inline-flex group relative transition-smooth' key={id}>
             <a href={`#${id}`} onClick={(e) => scrollToSection(e, `#${id}`)}
-              className={`p-3.5 rounded-[14px] border transition-colors ease-in-out duration-300 ${
-                active === id ? 'border-red-500' : 'border-black'
-              }`}
+              className={`size-12 p-[1px] rounded-[14px] group transition-smooth ${active === id ? 'bg-gradient-to-b from-[#BFADEF] to-[#4F46E5] text-white shadow-xl shadow-indigo-400/20' : 'bg-[#262333] text-indigo-200/40'
+                }`}
             >
-              {icon}
+              <div className='w-full h-full grid place-content-center bg-[#17151E] group-hover:bg-[#17151E] rounded-[13px] transition-smooth'>
+                {icon}
+              </div>
             </a>
             {/* Tooltip */}
-            <span className={`px-2 py-1 text-sm rounded-lg text-nowrap border absolute transform -translate-y-1/2 top-1/2 left-15 transform opacity-0 transition-opacity ease-in-out duration-150 group-hover:opacity-100 pointer-events-none`}>{label}</span>
+            <span className={`px-2 py-1 text-sm rounded-lg text-nowrap text-indigo-100 border border-[#262333] bg-[#15131C] absolute transform -translate-y-1/2 top-1/2 left-15 transform opacity-0 transition-opacity ease-in-out duration-150 group-hover:opacity-100 pointer-events-none`}>{label}</span>
           </div>
         ))}
       </div>

@@ -8,7 +8,7 @@
 }
 
 body {
-  @apply bg-[#15131C];
+  @apply bg-[#15131C] overflow-x-hidden;
   font-family: 'Poppins', sans-serif;
 }
 
