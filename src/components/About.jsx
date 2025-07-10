@@ -5,29 +5,29 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger'
 gsap.registerPlugin(ScrollTrigger)
 
 const About = () => {
+
   const sectionRef = useRef(null)
 
   useEffect(() => {
     const el = sectionRef.current
 
-    // Move section upward while scrolling
-    gsap.fromTo(
-      el,
-      { y: 100 },
-      {
-        y: -180,
-        ease: 'none',
-        duration: 3,
-        scrollTrigger: {
-          trigger: el,
-          toggleActions: 'restart pause reverse pause',
-          start: 'top bottom',
-          end: 'bottom top',
-          scrub: 1,
-          markers: false,
-        },
-      }
-    )
+    // gsap.fromTo(
+    //   el,
+    //   { y: 100 },
+    //   {
+    //     y: -180,
+    //     ease: 'none',
+    //     duration: 3,
+    //     scrollTrigger: {
+    //       trigger: el,
+    //       toggleActions: 'restart pause reverse pause',
+    //       start: 'top bottom',
+    //       end: 'bottom top',
+    //       scrub: 1,
+    //       markers: false,
+    //     },
+    //   }
+    // )
 
     gsap.fromTo(
       '#box-1',

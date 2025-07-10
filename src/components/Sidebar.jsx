@@ -22,7 +22,7 @@ const Sidebar = () => {
   ]
 
   return (
-    <aside className='px-12 border fixed h-screen flex items-center z-50'>
+    <aside className='px-10 border fixed h-screen flex items-center z-50'>
       <div className='flex flex-col gap-1 border p-1 rounded-[16px]'>
        {navItems.map(({ id, icon }) => (
           <a key={id} href={`#${id}`} onClick={(e) => scrollToSection(e, `#${id}`)}
