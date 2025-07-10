@@ -67,7 +67,7 @@ const About = () => {
   }, [])
 
   return (
-    <section className='px-48 py-30 border border-amber-500 bg-amber-500/20' id='about'>
+    <section className='px-48 py-30 border border-amber-500/20' id='about'>
       <div className='grid grid-cols-3 p-3 gap-4'>
         <div id='box-1' className='col-span-2 border py-24'>
           hello

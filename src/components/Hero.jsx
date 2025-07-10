@@ -59,6 +59,21 @@ const Hero = () => {
     //     },
     //   }
     // )
+    // Tryyy hero grid
+    // gsap.fromTo(
+    //   '#hero-grid',
+    //   { scale: 1 },
+    //   {
+    //     scale: 2,
+    //     scrollTrigger: {
+    //       trigger: '#hero-grid',
+    //       start: 'top 20%',
+    //       end: 'top -120%',
+    //       scrub: 1,
+    //       markers: false
+    //     },
+    //   }
+    // )
     // Heading Animation
     gsap.fromTo(
       '#heading-1',
@@ -92,8 +107,8 @@ const Hero = () => {
               { icon: FaBehance, link: 'https://www.behance.net/fwedwicc' },
               { icon: FaDribbble, link: 'https://dribbble.com/fwedwic' },
             ].map((item, index) => (
-              <a href={item.link} target='_blank' rel='noopener noreferrer' className='grid place-items-center size-7 group rounded-md hover:bg-indigo-400/5 transition-smooth' key={index}>
-                <item.icon className='size-4 group-hover:text-indigo-500 text-indigo-100 transition-smooth' />
+              <a href={item.link} target='_blank' rel='noopener noreferrer' className='grid place-items-center size-7 group rounded-md hover:bg-[#111017] transition-smooth' key={index}>
+                <item.icon className='size-4 group-hover:text-white text-indigo-100 transition-smooth' />
               </a>
             ))}
           </div>
@@ -119,7 +134,7 @@ const Hero = () => {
         <div className='bg-indigo-600 w-[10rem] h-12 absolute transform -top-8 rounded-full -translate-x-1/2 left-1/2 blur-2xl'></div>
         <img src={HeroGlow} alt="Glow" className='absolute w-auto border border-green-500/20 top-0 transform -translate-x-1/2 left-1/2 z-10' />
         {/* Grid */}
-        <img src={HeroGrid} alt="Grid" className='absolute h-auto w-[75%] opacity-80 border border-green-500/20 -translate-x-1/2 left-1/2 -z-10' />
+        <img src={HeroGrid} alt="Grid" id='hero-grid' className='absolute h-auto w-[75%] opacity-80 border border-green-500/20 -translate-x-1/2 left-1/2 -z-10' />
         <div className='relative flex flex-col items-center justify-center h-full gap-[40px] border'>
           {/* Extra Glow Effect */}
           <div className='h-[180px] w-[250px] absolute bg-indigo-700/30 mb-14 rounded-b-[5rem] blur-lg'></div>
@@ -130,7 +145,7 @@ const Hero = () => {
             </div>
           </div>
           {/* Heading */}
-          <h1 id='heading-1' className='text-[70px] text-center'>i design and build</h1>
+          <h1 id='heading-1' className='text-[60px] text-center'>i design and build</h1>
         </div>
       </section>
     </>

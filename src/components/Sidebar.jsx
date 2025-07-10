@@ -32,12 +32,12 @@ const Sidebar = () => {
               className={`size-12 p-[1px] rounded-[14px] group transition-smooth ${active === id ? 'bg-gradient-to-b from-[#BFADEF] to-[#4F46E5] text-white shadow-xl shadow-indigo-400/20' : 'bg-[#262333] text-indigo-200/40'
                 }`}
             >
-              <div className='w-full h-full grid place-content-center bg-[#17151E] group-hover:bg-[#17151E] rounded-[13px] transition-smooth'>
+              <div className='w-full h-full grid place-content-center bg-[#17151E] group-hover:bg-[#111017] rounded-[13px] transition-smooth'>
                 {icon}
               </div>
             </a>
             {/* Tooltip */}
-            <span className={`px-2 py-1 text-sm rounded-lg text-nowrap text-indigo-100 border border-[#262333] bg-[#15131C] absolute transform -translate-y-1/2 top-1/2 left-15 transform opacity-0 transition-opacity ease-in-out duration-150 group-hover:opacity-100 pointer-events-none`}>{label}</span>
+            <span className={`px-2 py-1 text-xs rounded-lg text-nowrap text-indigo-100 border border-[#262333] bg-[#15131C] absolute transform -translate-y-1/2 top-1/2 left-14 transform opacity-0 transition-opacity ease-in-out duration-150 group-hover:opacity-100 pointer-events-none`}>{label}</span>
           </div>
         ))}
       </div>
