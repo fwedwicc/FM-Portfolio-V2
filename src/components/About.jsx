@@ -66,28 +66,39 @@ const About = () => {
 
   }, [])
 
+  const GlowContainer = ({ id, variant, children }) => {
+    return (
+      <div id={id} className='relative group bg-[#262333] p-[1px] h-64 rounded-4xl'>
+        {/* Glow 3 - Inner */}
+        <div className={`absolute w-14 h-[170%] bg-indigo-500 opacity-0 group-hover:opacity-90 blur-[5rem] -translate-y-1/2 top-1/2 transition-smooth ${variant === 'left' ? 'left-[-9.5rem]' : 'right-[-9.5rem]'}`}></div>
+        {/* Glow 3 - Outer */}
+        <div className={`absolute w-10 h-[50%] bg-indigo-400 opacity-0 group-hover:opacity-90 blur-[2rem] -translate-y-1/2 top-1/2 transition-smooth ${variant === 'left' ? 'left-[-11rem]' : 'right-[-11rem]'}`}></div>
+        {/* Glow Border */}
+        <div className={`w-full h-full absolute top-0 left-0 from-[#191721] via-[#BFADEF] to-[#4F46E5] -z-10 rounded-4xl opacity-0 group-hover:opacity-100 transition-smooth ${variant === 'left' ? 'bg-gradient-to-l' : 'bg-gradient-to-r'}`}></div>
+        {/* Content */}
+        {children}
+      </div>
+    )
+  }
+
   return (
-    <section className='px-36 py-30 border border-amber-500/20' id='about'>
-      <div className='grid grid-cols-3 p-3 gap-4'>
-        <div id='left-container' className='col-span-2 border py-24'>
+    <section className='md:px-36 px-6 py-30 border border-amber-500/20' id='about'>
+      <div className='grid md:grid-cols-3 grid-cols-1 p-3 gap-4'>
+        <div id='left-container' className='md:col-span-2 col-span-auto border py-24'>
           hello 1
         </div>
         <div id='right-container' className='border py-24'>
           hello
         </div>
         {/* Container 3 */}
-        <div id='left-container' className='group bg-red-500 p-[1px] h-64 rounded-4xl'>
-          {/* Glow 3 - Inner */}
-          <div className='absolute w-14 h-[170%] bg-indigo-500 opacity-0 group-hover:opacity-90 blur-[5rem] -translate-y-1/2 top-1/2 left-[-9.5rem] transition-smooth'></div>
-          {/* Glow 3 - Outer */}
-          <div className='absolute w-10 h-[50%] bg-indigo-400 opacity-0 group-hover:opacity-90 blur-[2rem] -translate-y-1/2 top-1/2 left-[-9.5rem] transition-smooth'></div>
-          <div className='p-8 w-full h-full bg-gray-900 rounded-4xl'>
+        <GlowContainer id='left-container' variant='left'>
+          <div className='p-8 w-full h-full bg-[#15131C] rounded-[31px]'>
             <div className='space-y-4'>
               <h2>i design</h2>
               <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Amet delectus vitae quos culpa, porro reiciendis cumque quasi.</p>
             </div>
           </div>
-        </div>
+        </GlowContainer>
         {/* Container 4 */}
         <div className='border p-8 h-64 rounded-4xl'>
           {/*  */}
@@ -97,13 +108,14 @@ const About = () => {
           </div>
         </div>
         {/* Container 5 */}
-        <div id='right-container' className='border p-8 h-64 rounded-4xl'>
-          {/*  */}
-          <div className='space-y-4'>
-            <h2>beyond field</h2>
-            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Amet delectus vitae quos culpa, porro reiciendis cumque quasi.</p>
+        <GlowContainer id='right-container' variant='right'>
+          <div className='p-8 w-full h-full bg-[#15131C] rounded-[31px]'>
+            <div className='space-y-4'>
+              <h2>beyond field</h2>
+              <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Amet delectus vitae quos culpa, porro reiciendis cumque quasi.</p>
+            </div>
           </div>
-        </div>
+        </GlowContainer>
       </div>
     </section>
   )
