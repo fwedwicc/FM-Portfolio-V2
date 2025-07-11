@@ -31,7 +31,7 @@ const About = () => {
 
     gsap.fromTo(
       '#left-container',
-      { x: -40, opacity: 0 },
+      { x: -35, opacity: 0 },
       {
         x: 0,
         opacity: 1,
@@ -41,14 +41,14 @@ const About = () => {
           trigger: '#left-container',
           scrub: 1,
           markers: false,
-          start: 'top 110%',
-          end: 'bottom 80%',
+          start: 'top 120%',
+          end: 'bottom 60%',
         },
       }
     )
     gsap.fromTo(
       '#right-container',
-      { x: 40, opacity: 0 },
+      { x: 35, opacity: 0 },
       {
         x: 0,
         opacity: 1,
@@ -58,17 +58,17 @@ const About = () => {
           trigger: '#right-container',
           scrub: 1,
           markers: false,
-          start: 'top 110%',
-          end: 'bottom 80%',
+          start: 'top 120%',
+          end: 'bottom 60%',
         },
       }
     )
 
   }, [])
 
-  const GlowContainer = ({ id, variant, children }) => {
+  const GlowContainer = ({ id, variant, children, styles }) => {
     return (
-      <div id={id} className='relative group bg-[#262333] p-[1px] h-64 rounded-4xl'>
+      <div id={id} className={`relative group bg-[#262333] p-[1px] h-64 rounded-4xl ${styles}`}>
         {/* Glow 3 - Inner */}
         <div className={`absolute w-14 h-[170%] bg-indigo-500 opacity-0 group-hover:opacity-90 blur-[5rem] -translate-y-1/2 top-1/2 transition-smooth ${variant === 'left' ? 'left-[-9.5rem]' : 'right-[-9.5rem]'}`}></div>
         {/* Glow 3 - Outer */}
@@ -84,13 +84,21 @@ const About = () => {
   return (
     <section className='md:px-36 px-6 py-30 border border-amber-500/20' id='about'>
       <div className='grid md:grid-cols-3 grid-cols-1 p-3 gap-4'>
-        <div id='left-container' className='md:col-span-2 col-span-auto border py-24'>
-          hello 1
-        </div>
-        <div id='right-container' className='border py-24'>
-          hello
-        </div>
-        {/* Container 3 */}
+        {/* 'who am i?' */}
+        <GlowContainer id='left-container' variant='left' styles='md:col-span-2 col-span-auto'>
+          <div className='p-8 w-full h-full bg-[#15131C] rounded-[31px]'>
+            <div className='space-y-4'>
+              <h2>who am i?</h2>
+            </div>
+          </div>
+        </GlowContainer>
+        {/* Profile?? */}
+        <GlowContainer id='right-container' variant='right'>
+          <div className='p-8 w-full h-full bg-[#15131C] rounded-[31px]'>
+            <p>profile?</p>
+          </div>
+        </GlowContainer>
+        {/* 'i design' */}
         <GlowContainer id='left-container' variant='left'>
           <div className='p-8 w-full h-full bg-[#15131C] rounded-[31px]'>
             <div className='space-y-4'>
@@ -99,15 +107,20 @@ const About = () => {
             </div>
           </div>
         </GlowContainer>
-        {/* Container 4 */}
-        <div className='border p-8 h-64 rounded-4xl'>
-          {/*  */}
-          <div className='space-y-4'>
-            <h2>i develop</h2>
-            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Amet delectus vitae quos culpa, porro reiciendis cumque quasi.</p>
+
+        {/* 'i develop' */}
+        <div className={`relative group bg-[#262333] hover:bg-transparent p-[1px] h-64 rounded-4xl transition-smooth hover:shadow-2xl shadow-indigo-500/20`}>
+          {/* Glow Border */}
+          <div className={`w-full h-full absolute top-0 left-0 bg-gradient-to-b from-[#191721] via-[#BFADEF] to-[#4F46E5] -z-10 rounded-4xl opacity-0 group-hover:opacity-100 transition-smooth`}></div>
+          {/* Content */}
+          <div className='p-8 w-full h-full bg-[#15131C] rounded-[31px]'>
+            <div className='space-y-4'>
+              <h2>i develop</h2>
+              <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Amet delectus vitae quos culpa, porro reiciendis cumque quasi.</p>
+            </div>
           </div>
         </div>
-        {/* Container 5 */}
+        {/* 'beyond field' */}
         <GlowContainer id='right-container' variant='right'>
           <div className='p-8 w-full h-full bg-[#15131C] rounded-[31px]'>
             <div className='space-y-4'>
