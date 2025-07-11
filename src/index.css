@@ -1,34 +1,26 @@
 @import "tailwindcss";
 
+/* ---------------- Base Styles ---------------- */
 @font-face {
   font-family: "Poppins";
-  src: url("/fonts/Poppins-Regular.ttf") format("truetype");
+  src: url("/fonts/Poppins-Light.ttf") format("truetype");
   font-weight: auto;
   font-style: normal;
 }
-
 body {
   @apply bg-[#15131C] overflow-x-hidden;
   font-family: "Poppins", sans-serif;
 }
-
-@keyframes spin-slow-gradient {
-  0% {
-    transform: rotate(0deg);
-  }
-  100% {
-    transform: rotate(360deg);
-  }
+p {
+  @apply text-indigo-100/80 text-sm;
 }
-
-.animate-spin-gradient {
-  animation: spin-slow-gradient 8s linear infinite;
+h2 {
+  @apply text-5xl text-indigo-50;
 }
-
-/* Smooth Transition */
 .transition-smooth {
   @apply transition-all duration-300 ease-in-out;
 }
+/* ---------------- // Base Styles ---------------- */
 
 /* ---------------- Hero ---------------- */
 #hero-logo {
@@ -40,4 +32,18 @@ h1 {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
-/* ---------------- Hero ---------------- */
+/* ---------------- // Hero ---------------- */
+
+/* ---------------- Testing ---------------- */
+@keyframes spin-slow-gradient {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+.animate-spin-gradient {
+  animation: spin-slow-gradient 8s linear infinite;
+}
+/* ---------------- // Testing ---------------- */

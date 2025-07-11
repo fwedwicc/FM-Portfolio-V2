@@ -30,7 +30,7 @@ const About = () => {
     // )
 
     gsap.fromTo(
-      '#box-1',
+      '#left-container',
       { x: -40, opacity: 0 },
       {
         x: 0,
@@ -38,7 +38,7 @@ const About = () => {
         ease: 'none',
         duration: 3,
         scrollTrigger: {
-          trigger: '#box-1',
+          trigger: '#left-container',
           scrub: 1,
           markers: false,
           start: 'top 110%',
@@ -47,7 +47,7 @@ const About = () => {
       }
     )
     gsap.fromTo(
-      '#box-2',
+      '#right-container',
       { x: 40, opacity: 0 },
       {
         x: 0,
@@ -55,7 +55,7 @@ const About = () => {
         ease: 'none',
         duration: 3,
         scrollTrigger: {
-          trigger: '#box-2',
+          trigger: '#right-container',
           scrub: 1,
           markers: false,
           start: 'top 110%',
@@ -67,19 +67,42 @@ const About = () => {
   }, [])
 
   return (
-    <section className='px-48 py-30 border border-amber-500/20' id='about'>
+    <section className='px-36 py-30 border border-amber-500/20' id='about'>
       <div className='grid grid-cols-3 p-3 gap-4'>
-        <div id='box-1' className='col-span-2 border py-24'>
+        <div id='left-container' className='col-span-2 border py-24'>
+          hello 1
+        </div>
+        <div id='right-container' className='border py-24'>
           hello
         </div>
-        <div id='box-2' className='border py-24'>
-          hello
+        {/* Container 3 */}
+        <div id='left-container' className='group bg-red-500 p-[1px] h-64 rounded-4xl'>
+          {/* Glow 3 - Inner */}
+          <div className='absolute w-14 h-[170%] bg-indigo-500 opacity-0 group-hover:opacity-90 blur-[5rem] -translate-y-1/2 top-1/2 left-[-9.5rem] transition-smooth'></div>
+          {/* Glow 3 - Outer */}
+          <div className='absolute w-10 h-[50%] bg-indigo-400 opacity-0 group-hover:opacity-90 blur-[2rem] -translate-y-1/2 top-1/2 left-[-9.5rem] transition-smooth'></div>
+          <div className='p-8 w-full h-full bg-gray-900 rounded-4xl'>
+            <div className='space-y-4'>
+              <h2>i design</h2>
+              <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Amet delectus vitae quos culpa, porro reiciendis cumque quasi.</p>
+            </div>
+          </div>
         </div>
-        <div id='box-1' className='border py-24'>
-          hello
+        {/* Container 4 */}
+        <div className='border p-8 h-64 rounded-4xl'>
+          {/*  */}
+          <div className='space-y-4'>
+            <h2>i develop</h2>
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Amet delectus vitae quos culpa, porro reiciendis cumque quasi.</p>
+          </div>
         </div>
-        <div id='box-2' className='col-span-2 border py-24'>
-          hello
+        {/* Container 5 */}
+        <div id='right-container' className='border p-8 h-64 rounded-4xl'>
+          {/*  */}
+          <div className='space-y-4'>
+            <h2>beyond field</h2>
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Amet delectus vitae quos culpa, porro reiciendis cumque quasi.</p>
+          </div>
         </div>
       </div>
     </section>
