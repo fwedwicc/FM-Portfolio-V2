@@ -25,7 +25,7 @@ const Sidebar = () => {
 
   return (
     <aside className='px-6 border border-green-500/20 fixed h-screen flex items-center z-50'>
-      <div className='flex flex-col gap-1 border border-[#262333] bg-[#15131C] p-1 rounded-[16px]'>
+      <div className='flex flex-col gap-1 border border-[#262333] bg-[#15131C] p-1 rounded-[18px]'>
         {navItems.map(({ id, icon, label }) => (
           <div className='inline-flex group relative transition-smooth' key={id}>
             <a href={`#${id}`} onClick={(e) => scrollToSection(e, `#${id}`)}
@@ -37,7 +37,7 @@ const Sidebar = () => {
               </div>
             </a>
             {/* Tooltip */}
-            <span className={`px-2 py-1 text-xs rounded-lg text-nowrap text-indigo-100 border border-[#262333] bg-[#15131C] absolute transform -translate-y-1/2 top-1/2 left-14 transform opacity-0 transition-opacity ease-in-out duration-150 group-hover:opacity-100 pointer-events-none`}>{label}</span>
+            <span className={`px-2 py-1 text-xs rounded-lg text-nowrap text-indigo-100 border border-[#262333] bg-[#15131C] absolute -translate-y-1/2 top-1/2 left-14 transform opacity-0 transition-opacity ease-in-out duration-150 group-hover:opacity-100 pointer-events-none`}>{label}</span>
           </div>
         ))}
       </div>

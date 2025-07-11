@@ -4,6 +4,7 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import { FaBehance, FaDribbble, FaLinkedinIn, FaGithub } from "react-icons/fa"
 import { FMLogo } from '../assets'
 import { HeroGrid, HeroGlow } from '../assets/hero'
+import { Button } from '../components/ui'
 
 gsap.registerPlugin(ScrollTrigger)
 
@@ -117,9 +118,13 @@ const Hero = () => {
             <span className='text-indigo-100 text-xs'>FM © 2025</span>
           </div>
           {/* CTAs */}
-          <div id='CTAs' className='flex gap-1 p-1 border rounded-[13px]'>
-            <div className='px-3 py-2 border rounded-[10px] text-sm'>Linktree</div>
-            <div className='px-3 py-2 border rounded-[10px] text-sm'>Drop me a line</div>
+          <div id='CTAs' className='flex gap-1 p-1 border border-[#262333] bg-[#15131C] rounded-[13px]'>
+            {/* Linktree */}
+            <a href="https://fm-linktree.vercel.app" target='_blank' rel='noopener noreferrer'>
+              <Button variant="secondary" label="Linktree" />
+            </a>
+            {/* Get in touch */}
+            <Button variant="primary" label="Get in touch" />
           </div>
         </div>
       </header>
