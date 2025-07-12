@@ -2,6 +2,7 @@ import React, { useEffect, useRef } from 'react'
 import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import { TbCode } from "react-icons/tb"
+import { ProfileBlur } from '../assets/about'
 
 gsap.registerPlugin(ScrollTrigger)
 
@@ -83,20 +84,29 @@ const About = () => {
   }
 
   return (
-    <section className='md:px-36 px-6 md:py-30 py-9 border border-amber-500/20 overflow-hidden' id='about'>
+    <section className='md:px-36 px-6 md:py-24 py-9 border border-amber-500/20 overflow-hidden' id='about'>
       <div className='grid md:grid-cols-3 grid-cols-1 p-3 gap-4'>
         {/* 'who am i?' */}
         <GlowContainer id='left-container' variant='left' styles='md:col-span-2 col-span-auto'>
           <div className='p-8 w-full h-full bg-[#15131C] rounded-[31px]'>
             <div className='space-y-4'>
               <h2>who am i?</h2>
+              <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Amet delectus vitae quosorem, ipsum dolor sit amet consectetur adipisicing elit. Amet delectus vitae quos corem, ipsum dolor sit amet consectetur adipisicing elit. Amet delectus vitae quos corem, ipsum dolor sit amet consectetur adipisicing elit. Amet delectus vitae quos corem, ipsum dolor sit amet consectetur adipisicing elit. Amet delectus vitae quos corem, ipsum dolor sit amet consectetur adipisicing elit. Amet delectus vitae quos corem, ipsum dolor sit amet consectetur adipisicing elit. Amet delectus vitae quos corem, ipsum dolor sit amet consectetur adipisicing elit. Amet delectus vitae quos c culpa, porro reiciendis cumque quasi.</p>
             </div>
           </div>
         </GlowContainer>
-        {/* Profile?? */}
+        {/* Profile */}
         <GlowContainer id='right-container' variant='right'>
-          <div className='p-8 w-full h-full bg-[#15131C] rounded-[31px]'>
-            <p>profile?</p>
+          <div className='relative w-full h-full bg-[#15131C] rounded-[31px] overflow-hidden'>
+            {/* Image */}
+            <img src="https://avatars.githubusercontent.com/u/149291942?v=4" alt="Sample Profile" className='absolute top-0 left-0 object-cover w-full h-full' />
+            {/* Blur Effect */}
+            <img src={ProfileBlur} alt="Profile Blur Effect" className='absolute w-[80%] -bottom-24 z-20 border border-green-500' />
+            {/* Content */}
+            <div className='absolute w-full bottom-0 p-8'>
+              <h4>Frederick Moreno</h4>
+              <p>Currently eating noodles.</p>
+            </div>
           </div>
         </GlowContainer>
         {/* 'i design' */}
@@ -115,7 +125,7 @@ const About = () => {
                 <TbCode className='text-indigo-200/50 group-hover:text-indigo-400 size-8 stroke-[1.2px] transition-smooth' />
               </div>
 
-              <h2>i design</h2>
+              <h2>i design.</h2>
               <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Amet delectus vitae quos culpa, porro reiciendis cumque quasi.</p>
             </div>
           </div>
@@ -127,7 +137,7 @@ const About = () => {
           {/* Content */}
           <div className='p-8 w-full h-full bg-[#15131C] rounded-[31px]'>
             <div className='space-y-4'>
-              <h2>i develop</h2>
+              <h2>i develop.</h2>
               <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Amet delectus vitae quos culpa, porro reiciendis cumque quasi.</p>
             </div>
           </div>
@@ -136,7 +146,7 @@ const About = () => {
         <GlowContainer id='right-container' variant='right'>
           <div className='p-8 w-full h-full bg-[#15131C] rounded-[31px]'>
             <div className='space-y-4'>
-              <h2>beyond field</h2>
+              <h2>beyond field.</h2>
               <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Amet delectus vitae quos culpa, porro reiciendis cumque quasi.</p>
             </div>
           </div>
