@@ -139,10 +139,10 @@ const Hero = () => {
         <div className='bg-indigo-600 w-[10rem] h-12 absolute transform -top-8 rounded-full -translate-x-1/2 left-1/2 blur-2xl'></div>
         <img src={HeroGlow} alt="Glow" className='absolute w-auto border border-green-500/20 top-0 transform -translate-x-1/2 left-1/2 z-10' />
         {/* Grid */}
-        <img src={HeroGrid} alt="Grid" id='hero-grid' className='absolute h-auto w-[75%] opacity-80 border border-green-500/20 -translate-x-1/2 left-1/2 -z-10' />
+        <img src={HeroGrid} alt="Grid" id='hero-grid' className='absolute md:w-[65rem] w-[40rem] -translate-y-1/2 top-1/2 border border-green-500/20 -translate-x-1/2 left-1/2 -z-10' />
         <div className='relative flex flex-col items-center justify-center h-full gap-[40px] border'>
           {/* Extra Glow Effect */}
-          <div className='h-[180px] w-[250px] absolute bg-indigo-700/30 mb-14 rounded-b-[5rem] blur-lg'></div>
+          <div className='md:h-[180px] h-[120px] md:w-[250px] w-[250px] absolute bg-indigo-700/30 mb-14 rounded-b-[5rem] blur-lg'></div>
           {/* Logo */}
           <div id='hero-logo' className='size-[250px] rounded-[60px] p-[2px] bg-gradient-to-b from-[#BFADEF] to-[#4F46E5] overflow-hidden z-10'>
             <div className='grid place-content-center w-full h-full bg-[#191726] rounded-[59px]'>

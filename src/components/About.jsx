@@ -82,7 +82,7 @@ const About = () => {
   }
 
   return (
-    <section className='md:px-36 px-6 py-30 border border-amber-500/20' id='about'>
+    <section className='md:px-36 px-6 md:py-30 py-9 border border-amber-500/20 overflow-hidden' id='about'>
       <div className='grid md:grid-cols-3 grid-cols-1 p-3 gap-4'>
         {/* 'who am i?' */}
         <GlowContainer id='left-container' variant='left' styles='md:col-span-2 col-span-auto'>
@@ -107,7 +107,6 @@ const About = () => {
             </div>
           </div>
         </GlowContainer>
-
         {/* 'i develop' */}
         <div className={`relative group bg-[#262333] hover:bg-transparent p-[1px] h-64 rounded-4xl transition-smooth hover:shadow-2xl shadow-indigo-500/20`}>
           {/* Glow Border */}
