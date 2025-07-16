@@ -1,6 +1,6 @@
 import React from 'react'
 import { RiHome5Line, RiUser6Line, RiAwardLine, RiSendPlane2Line, RiBriefcaseLine } from "react-icons/ri"
-import { TbSmartHome, TbBriefcase2, TbMail } from "react-icons/tb"
+import { TbSmartHome, TbBriefcase2, TbMail, TbBrandTabler } from "react-icons/tb"
 import useActiveSection from '../hooks/useActiveSection'
 import { Tooltip } from './ui'
 
@@ -14,12 +14,13 @@ const scrollToSection = (e, target) => {
 
 const Sidebar = () => {
 
-  const active = useActiveSection(['home', 'about', 'experience', 'project', 'contact'])
+  const active = useActiveSection(['home', 'about', 'experience', 'expertise', 'project', 'contact'])
 
   const navItems = [
     { id: 'home', label: 'Home', icon: <TbSmartHome className='size-5 stroke-[1.9px]' /> },
     { id: 'about', label: 'About', icon: <RiUser6Line className='size-5 stroke-[-0.1px]' /> },
     { id: 'experience', label: 'Experience', icon: <RiAwardLine className='size-5 stroke-[-0.3px]' /> },
+    { id: 'expertise', label: 'Expertise', icon: <TbBrandTabler className='size-5 stroke-[-0.3px]' /> },
     { id: 'project', label: 'Projects', icon: <TbBriefcase2 className='size-5 stroke-[1.9px]' /> },
     { id: 'contact', label: 'Contact', icon: <TbMail className='size-5 stroke-[1.9px]' /> },
   ]
