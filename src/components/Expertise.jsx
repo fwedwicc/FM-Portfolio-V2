@@ -1,4 +1,5 @@
 import React from 'react'
+import { GitHubGrid } from '../components/ui'
 
 const Expertise = () => {
   return (
@@ -22,6 +23,7 @@ const Expertise = () => {
           {/* Contribution Graph */}
           <div>
             <h4>stats.</h4>
+            <GitHubGrid username="fwedwicc" />
           </div>
         </div>
       </div>
