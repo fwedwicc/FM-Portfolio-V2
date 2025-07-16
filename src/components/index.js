@@ -1,13 +1,13 @@
 import Hero from './Hero'
 import About from './About'
-import Tester from './Tester'
+import Experience from './Experience'
 import Sidebar from './Sidebar'
 import Loader from './Loader'
 
 export {
   Hero,
   About,
-  Tester,
+  Experience,
   Sidebar,
   Loader
 }
