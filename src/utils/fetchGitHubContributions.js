@@ -34,9 +34,9 @@ export const fetchGitHubContributions = async (username) => {
       const count = day.contributionCount
       let level = 0
       if (count > 0) level = 1
-      if (count >= 5) level = 2
-      if (count >= 10) level = 3
-      if (count >= 20) level = 4
+      if (count >= 4) level = 2
+      if (count >= 8) level = 3
+      if (count >= 11) level = 4
 
       return {
         date: day.date,

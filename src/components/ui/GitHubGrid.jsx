@@ -19,16 +19,15 @@ const GitHubGrid = ({ username }) => {
   }, [username])
 
   const levelColorMap = {
-    0: 'bg-indigo-100',
-    1: 'bg-indigo-300/80',
-    2: 'bg-indigo-500/80',
-    3: 'bg-indigo-700/50',
-    4: 'bg-indigo-700/50',
+    0: 'bg-gray-500/10',
+    1: 'bg-indigo-900/70',
+    2: 'bg-indigo-700/90',
+    3: 'bg-indigo-500',
+    4: 'bg-indigo-300',
   }
 
   return (
-    <div className="p-4 bg-black text-white rounded-md overflow-auto">
-      <h2 className="text-lg font-semibold mb-4">GitHub Contributions</h2>
+    <div className="flex overflow-hidden">
       <div className="flex gap-[2px]">
         {contributions.map((week, weekIndex) => (
           <div key={weekIndex} className="flex flex-col gap-[2px]">
@@ -36,7 +35,7 @@ const GitHubGrid = ({ username }) => {
               <div
                 key={dayIndex}
                 title={`${day.date}: ${day.count} contributions`}
-                className={`w-3.5 h-3.5 rounded-sm ${levelColorMap[day.level]}`}
+                className={`size-3.5 rounded-sm ${levelColorMap[day.level]}`}
               />
             ))}
           </div>
