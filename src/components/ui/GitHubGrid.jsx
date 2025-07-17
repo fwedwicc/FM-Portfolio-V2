@@ -1,6 +1,6 @@
-// GitHubGrid.jsx
 import React, { useEffect, useState } from 'react'
 import { fetchGitHubContributions } from '../../utils/fetchGitHubContributions'
+import { Tooltip } from './index'
 
 const GitHubGrid = ({ username }) => {
   const [contributions, setContributions] = useState([])
@@ -27,20 +27,19 @@ const GitHubGrid = ({ username }) => {
   }
 
   return (
-    <div className="flex overflow-hidden">
-      <div className="flex gap-[2px]">
-        {contributions.map((week, weekIndex) => (
-          <div key={weekIndex} className="flex flex-col gap-[2px]">
-            {week.map((day, dayIndex) => (
+    <div className="flex gap-[2px]">
+      {contributions.map((week, weekIndex) => (
+        <div key={weekIndex} className="flex flex-col gap-[2px]">
+          {week.map((day, dayIndex) => (
+            <div className='group relative transition-smooth' key={dayIndex}>
               <div
-                key={dayIndex}
-                title={`${day.date}: ${day.count} contributions`}
                 className={`size-3.5 rounded-sm ${levelColorMap[day.level]}`}
               />
-            ))}
-          </div>
-        ))}
-      </div>
+              <Tooltip position='-translate-x-1/2 left-1/2 top-4 z-50 absolute' label={`${day.date}: ${day.count} contributions`} />
+            </div>
+          ))}
+        </div>
+      ))}
     </div>
   )
 }
