@@ -2,7 +2,7 @@ import React, { useEffect, useRef } from 'react'
 import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import { TbCode } from "react-icons/tb"
-import { ProfileBlur } from '../assets/about'
+import { ProfileBlur, ContainerTopGlow, ContainerBottomGlow, ContainerSideGlow } from '../assets/about'
 
 gsap.registerPlugin(ScrollTrigger)
 
@@ -72,11 +72,17 @@ const About = () => {
     return (
       <div id={id} className={`relative group bg-[#1d1b28] p-[1px] rounded-4xl ${styles}`}>
         {/* Glow 3 - Inner */}
-        <div className={`absolute w-14 h-[170%] bg-indigo-500 opacity-0 group-hover:opacity-90 blur-[5rem] -translate-y-1/2 top-1/2 transition-smooth delay-100 pointer-events-none ${variant === 'left' ? 'left-[-9.5rem]' : 'right-[-9.5rem]'}`}></div>
+        <div className={`absolute w-14 h-[170%] bg-indigo-600 opacity-0 group-hover:opacity-90 blur-[5rem] -translate-y-1/2 top-1/2 transition-smooth delay-100 pointer-events-none ${variant === 'left' ? 'left-[-9.5rem]' : 'right-[-9.5rem]'}`}></div>
         {/* Glow 3 - Outer */}
-        <div className={`absolute w-10 h-[50%] bg-indigo-400 opacity-0 group-hover:opacity-90 blur-[2rem] -translate-y-1/2 top-1/2 transition-smooth delay-100 pointer-events-none ${variant === 'left' ? 'left-[-12rem]' : 'right-[-12rem]'}`}></div>
+        <div className={`absolute w-10 h-[50%] bg-indigo-400 opacity-0 group-hover:opacity-90 blur-[2.5rem] -translate-y-1/2 top-1/2 transition-smooth delay-100 pointer-events-none ${variant === 'left' ? 'left-[-12rem]' : 'right-[-12rem]'}`}></div>
         {/* Glow Border */}
         <div className={`w-full h-full absolute top-0 left-0 -z-10 rounded-4xl opacity-0 group-hover:opacity-100 transition-smooth delay-150 ${variant === 'left' ? 'hero-left-glow' : 'hero-right-glow'}`}></div>
+        {/* Container Top Glow */}
+        <img src={ContainerTopGlow} alt="Container Top Glow" className='absolute top-0 right-0 rounded-tr-4xl opacity-0 group-hover:opacity-100 transition-smooth delay-200' />
+        {/* Container Side Glow */}
+        <img src={ContainerSideGlow} alt="Container Top Glow" className='absolute h-full right-0 rounded-r-4xl border-r-2 border-indigo-300 opacity-0 group-hover:opacity-100 transition-smooth delay-200' />
+        {/* Container Bottom Glow */}
+        {/* <img src={ContainerBottomGlow} alt="Container Top Glow" className='absolute bottom-0 right-0 rounded-br-4xl opacity-0 group-hover:opacity-100 transition-smooth delay-200' /> */}
         {/* Content */}
         {children}
       </div>
@@ -113,13 +119,6 @@ const About = () => {
         <GlowContainer id='left-container' variant='left'>
           <div className='p-8 w-full h-full bg-[#15131C] rounded-[31px]'>
             <div className='space-y-4'>
-
-              {/* <div className='relative inline-flex p-[1px] overflow-hidden rounded-[19px] group'>
-                <div className='absolute w-full h-full top-0 left-0 bg-gradient-to-l from-[#BFADEF] to-[#4F46E5] opacity-0 group-hover:opacity-100 transition-smooth delay-200'></div>
-                <div className='p-4 bg-[#15131C] z-10 rounded-[18px]'>
-                  <TbCode className='text-indigo-200/50 size-8 stroke-[1.2px]' />
-                </div>
-              </div> */}
 
               <div className='inline-flex p-4 rounded-[19px] border border-[#1d1b28] group-hover:border-[#211f2d] transition-smooth'>
                 <TbCode className='text-indigo-200/50 group-hover:text-indigo-400 size-8 stroke-[1.2px] transition-smooth' />
