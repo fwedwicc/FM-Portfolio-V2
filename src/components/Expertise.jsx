@@ -3,12 +3,12 @@ import { GitHubGrid, GitHubStats } from '../components/ui'
 
 const Expertise = () => {
   return (
-    <section id='expertise' className='md:px-36 px-6 md:py-24 py-9 space-y-8 border border-blue-500/20'>
+    <section id='expertise' className='md:px-36 px-6 md:py-24 py-9 space-y-10 border border-blue-500/20'>
       {/* First Row */}
       <div className='grid grid-cols-2 gap-8'>
         {/* Tech Stacks */}
         <div className='border border-green-500/20 rounded-4xl p-8'>
-          <h4>tech stacks.</h4>
+          <h5>tech stacks.</h5>
           {/* Tech Icons */}
           <div className='flex items-center flex-wrap gap-2 mt-5'>
             {Array.from({ length: 12 }).map((_, index) => (
