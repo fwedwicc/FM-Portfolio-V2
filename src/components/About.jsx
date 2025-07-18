@@ -2,7 +2,7 @@ import React, { useEffect, useRef } from 'react'
 import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import { TbCode } from "react-icons/tb"
-import { ProfileBlur, ContainerTopGlow, ContainerBottomGlow, ContainerSideGlow } from '../assets/about'
+import { ProfileBlur } from '../assets/about'
 
 gsap.registerPlugin(ScrollTrigger)
 
@@ -33,7 +33,7 @@ const About = () => {
 
     gsap.fromTo(
       '#left-container',
-      { x: -35, opacity: 0 },
+      { x: -50, opacity: 0 },
       {
         x: 0,
         opacity: 1,
@@ -50,7 +50,7 @@ const About = () => {
     )
     gsap.fromTo(
       '#right-container',
-      { x: 35, opacity: 0 },
+      { x: 50, opacity: 0 },
       {
         x: 0,
         opacity: 1,
@@ -77,12 +77,6 @@ const About = () => {
         <div className={`absolute w-10 h-[50%] bg-indigo-400 opacity-0 group-hover:opacity-90 blur-[2.5rem] -translate-y-1/2 top-1/2 transition-smooth delay-100 pointer-events-none ${variant === 'left' ? 'left-[-12rem]' : 'right-[-12rem]'}`}></div>
         {/* Glow Border */}
         <div className={`w-full h-full absolute top-0 left-0 -z-10 rounded-4xl opacity-0 group-hover:opacity-100 transition-smooth delay-150 ${variant === 'left' ? 'hero-left-glow' : 'hero-right-glow'}`}></div>
-        {/* Container Top Glow */}
-        <img src={ContainerTopGlow} alt="Container Top Glow" className='absolute top-0 right-0 rounded-tr-4xl opacity-0 group-hover:opacity-100 transition-smooth delay-200' />
-        {/* Container Side Glow */}
-        <img src={ContainerSideGlow} alt="Container Top Glow" className='absolute h-full right-0 rounded-r-4xl border-r-2 border-indigo-300 opacity-0 group-hover:opacity-100 transition-smooth delay-200' />
-        {/* Container Bottom Glow */}
-        {/* <img src={ContainerBottomGlow} alt="Container Top Glow" className='absolute bottom-0 right-0 rounded-br-4xl opacity-0 group-hover:opacity-100 transition-smooth delay-200' /> */}
         {/* Content */}
         {children}
       </div>
