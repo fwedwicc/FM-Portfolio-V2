@@ -12,7 +12,7 @@ body {
   font-family: "Poppins", sans-serif;
 }
 p {
-  @apply text-indigo-100/80 text-sm;
+  @apply text-indigo-100/90 text-sm;
 }
 h2 {
   @apply text-4xl text-indigo-50;

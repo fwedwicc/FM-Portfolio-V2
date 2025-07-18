@@ -20,7 +20,6 @@ const Expertise = () => {
         </div>
         {/* GitHub Stats */}
         <div>
-          <h4>stats.</h4>
           <GitHubStats username="fwedwicc" />
         </div>
       </div>

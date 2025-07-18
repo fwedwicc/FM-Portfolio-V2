@@ -124,7 +124,7 @@ const About = () => {
           </div>
         </GlowContainer>
         {/* 'i develop' */}
-        <div className={`relative group bg-[#1d1b28] hover:bg-transparent p-[1px] rounded-4xl transition-smooth hover:shadow-2xl shadow-indigo-500/20`}>
+        <div className={`relative group bg-[#1d1b28] hover:bg-transparent p-[1px] rounded-4xl transition-smooth hover:shadow-2xl shadow-indigo-600/20`}>
           {/* Glow Border */}
           <div className={`w-full h-full absolute top-0 left-0 bg-gradient-to-b from-[#191721] via-[#BFADEF] to-[#4F46E5] -z-10 rounded-4xl opacity-0 group-hover:opacity-100 transition-smooth`}></div>
           {/* Content */}
