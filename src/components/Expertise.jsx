@@ -9,7 +9,6 @@ const Expertise = () => {
         {/* Tech Stacks */}
         <div className='border border-green-500/20 rounded-4xl p-8'>
           <h4>tech stacks.</h4>
-          <p>Basically some technologies I am using.</p>
           {/* Tech Icons */}
           <div className='flex items-center flex-wrap gap-2 mt-5'>
             {Array.from({ length: 12 }).map((_, index) => (

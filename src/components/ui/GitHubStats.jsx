@@ -13,13 +13,29 @@ const GitHubStats = ({ username }) => {
     loadStats()
   }, [username])
 
+  const formatDate = (dateStr) => {
+    if (!dateStr) return 'N/A'
+    return new Intl.DateTimeFormat('en-US', {
+      year: 'numeric',
+      month: 'long',
+      day: 'numeric',
+    }).format(new Date(dateStr))
+  }
+
   if (!stats) return <p>Loading GitHub stats...</p>
 
   return (
     <div className="text-white">
       <p>Total Contributions: {stats.totalContributions}</p>
-      <p>Current Streak: {stats.currentStreak.length} days ({stats.currentStreak.startDate} - {stats.currentStreak.endDate})</p>
-      <p>Longest Streak: {stats.longestStreak.length} days ({stats.longestStreak.startDate} - {stats.longestStreak.endDate})</p>
+      <p>
+        Current Streak: {stats.currentStreak.length} days (
+        {formatDate(stats.currentStreak.startDate)} – {formatDate(stats.currentStreak.endDate)})
+      </p>
+
+      <p>
+        Longest Streak: {stats.longestStreak.length} days (
+        {formatDate(stats.longestStreak.startDate)} – {formatDate(stats.longestStreak.endDate)})
+      </p>
     </div>
   )
 }
