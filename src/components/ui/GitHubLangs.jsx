@@ -31,7 +31,7 @@ export default function GitHubLangs() {
             <div
               key={index}
               style={{ width: `${lang.percentage}%` }}
-              className={`relative group h-full shadow-lg rounded-xs ${getShadow(lang.language)} ${getColor(lang.language)}`}
+              className={`relative group h-full shadow-lg rounded-[3px] ${getShadow(lang.language)} ${getColor(lang.language)}`}
             >
               <Tooltip position='top-4 -translate-x-1/2 left-1/2' label={`${lang.language}: ${lang.percentage}%`} />
             </div>
