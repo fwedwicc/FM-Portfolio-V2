@@ -44,7 +44,7 @@ export default function GitHubLangs() {
             <span
               className={`inline-block size-2.5 rounded-sm ${getColor(lang.language)}`}
             />
-            {lang.language} <span className='text-xs text-indigo-300/90'>{lang.percentage}%</span>
+            {lang.language} <span className='text-xs text-indigo-200/90 px-[5px] py-[1px] border border-indigo-300/5 bg-indigo-400/5 rounded-lg'>{lang.percentage}%</span>
           </div>
         ))}
       </div>

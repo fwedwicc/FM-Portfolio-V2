@@ -114,7 +114,7 @@ const About = () => {
           <div className='p-8 w-full h-full bg-[#15131C] rounded-[31px]'>
             <div className='space-y-4'>
 
-              <div className='inline-flex p-4 rounded-[19px] border border-[#1d1b28] group-hover:border-[#211f2d] transition-smooth'>
+              <div className='inline-flex p-4 rounded-[19px] border border-[#1d1b28] group-hover:border-[#211f2d] shadow-[#110f17] group-hover:shadow-xl transition-smooth'>
                 <TbCode className='text-indigo-200/50 group-hover:text-indigo-400 size-8 stroke-[1.2px] transition-smooth' />
               </div>
 
