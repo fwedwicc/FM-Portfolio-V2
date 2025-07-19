@@ -1,6 +1,8 @@
 import React, { useEffect } from 'react'
 import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
+import { CertificationsGlow } from '../assets/experience'
+import { Button } from './ui'
 
 gsap.registerPlugin(ScrollTrigger)
 
@@ -45,8 +47,8 @@ const Experience = () => {
   }, [])
 
   return (
-    <section id='experience' className='border border-blue-500/20'>
-      <div className='md:px-36 px-6 md:py-24 py-9 '>
+    <section id='experience' className='border border-blue-500/20 space-y-16'>
+      <div className='md:px-36 px-6'>
         {/* Education and Work */}
         <div className='grid grid-cols-2 gap-8'>
           {/* Container: Experiences */}
@@ -61,21 +63,27 @@ const Experience = () => {
               <h5>Quezon City University</h5>
             </div>
           </div>
-
         </div>
       </div>
       {/* Certifications */}
-      <div className='border h-94 w-full px-6'>
-        <div className='bg-indigo-200 h-full rounded-4xl grid grid-cols-2 overflow-hidden'>
+      <div className='h-94 w-full px-6'>
+        <div className='relative border border-[#2d283d] bg-transparent h-full rounded-4xl grid md:grid-cols-2 grid-cols-1 overflow-hidden'>
+          {/* Left Glow */}
+          <img src={CertificationsGlow} alt="Left Glow" className='absolute left-0 h-full w-auto z-10' />
+          {/* Right Glow */}
+          <div className='absolute right-0 bottom-0 size-64 rounded-lg bg-indigo-500/20 blur-3xl z-10' />
           {/* Left Content */}
-          <div className='border'>
-
+          <div className='z-20 p-30 space-y-4'>
+            <span className='block text-4xl text-[#15131C] font-bold'>certifications.</span>
+            <span className='block text-sm text-[#15131C] font-bold w-full max-w-xs'>Lorem, ipsum dolor sit amet consecur adipicing elit. Nisi beatae nobis nihil minima.</span>
+            <Button variant="secondary" label="View certificates" />
           </div>
           {/* Right Content */}
-          <div className='border grid grid-cols-3 gap-7 pr-16'>
+          <div className='grid grid-cols-3 gap-7 lg:pr-16 md:pr-0'>
             {/* First Column */}
             <div className='border flex flex-col justify-start items-start gap-2 -skew-x-36 -mt-20'>
               <div id='bottom' className='h-auto border' />
+              <img src="https://placehold.co/30x17" alt="" className='h-auto w-full bg-green-500/20' />
               <img src="https://placehold.co/30x17" alt="" className='h-auto w-full bg-green-500/20' />
               <img src="https://placehold.co/30x17" alt="" className='h-auto w-full bg-green-500/20' />
               <img src="https://placehold.co/30x17" alt="" className='h-auto w-full bg-green-500/20' />
@@ -89,9 +97,13 @@ const Experience = () => {
               <img src="https://placehold.co/30x17" alt="" className='h-auto w-full bg-green-500/20' />
               <img src="https://placehold.co/30x17" alt="" className='h-auto w-full bg-green-500/20' />
               <img src="https://placehold.co/30x17" alt="" className='h-auto w-full bg-green-500/20' />
+              <img src="https://placehold.co/30x17" alt="" className='h-auto w-full bg-green-500/20' />
             </div>
             <div className='border flex flex-col justify-start items-start gap-2 -skew-x-36 -mt-44'>
               <div id='bottom' className='h-auto border' />
+              <img src="https://placehold.co/30x17" alt="" className='h-auto w-full bg-green-500/20' />
+              <img src="https://placehold.co/30x17" alt="" className='h-auto w-full bg-green-500/20' />
+              <img src="https://placehold.co/30x17" alt="" className='h-auto w-full bg-green-500/20' />
               <img src="https://placehold.co/30x17" alt="" className='h-auto w-full bg-green-500/20' />
               <img src="https://placehold.co/30x17" alt="" className='h-auto w-full bg-green-500/20' />
               <img src="https://placehold.co/30x17" alt="" className='h-auto w-full bg-green-500/20' />
