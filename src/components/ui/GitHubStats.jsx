@@ -38,11 +38,11 @@ const GitHubStats = ({ username }) => {
       </div>
       {/* Current Streak */}
       <div className='flex flex-col items-center gap-1'>
-        <div className='relative size-34 rounded-4xl p-[4px] bg-gradient-to-b from-[#BFADEF] to-[#4F46E5] shadow-xl shadow-indigo-500/20 mb-4'>
+        <div className='relative size-34 rounded-[36px] p-[4px] bg-gradient-to-b from-[#BFADEF] to-[#4F46E5] shadow-xl shadow-indigo-500/20 mb-4'>
           <div className='p-1.5 absolute -top-[13px] bg-[#BFADEF] rounded-[10px] -translate-x-1/2 left-1/2'>
             <FaFire className='text-indigo-900 size-4.5' />
           </div>
-          <div className='w-full h-full p-4 bg-[#15131C] rounded-[28px] grid place-content-center'>
+          <div className='w-full h-full p-4 bg-[#15131C] rounded-[34px] grid place-content-center'>
             <h1 className='text-4xl'>{stats.currentStreak.length}</h1>
             <h1 className='text-lg leading-none text-center'>days</h1>
           </div>

@@ -1,6 +1,28 @@
 import React from 'react'
 import { Tooltip, GitHubGrid, GitHubStats, GitHubLangs } from '../components/ui'
-import { JavaScriptLogo } from '../assets/expertise'
+import { HTMLLogo, CSSLogo, JavaScriptLogo, ReactJSLogo, NextJSLogo, TailwindCSSLogo, NodeJSLogo, ExpressJSLogo, MongoDBLogo, BootstrapLogo, PHPLogo, NetLogo, GSAPLogo, FramerMotionLogo, GitLogo, GitHubLogo, FigmaLogo, VSCodeLogo, VSLogo } from '../assets/expertise'
+
+const techStacks = [
+  { name: 'HTML', logo: HTMLLogo },
+  { name: 'CSS', logo: CSSLogo },
+  { name: 'JavaScript', logo: JavaScriptLogo },
+  { name: 'ReactJS', logo: ReactJSLogo },
+  { name: 'NextJS', logo: NextJSLogo },
+  { name: 'TailwindCSS', logo: TailwindCSSLogo },
+  { name: 'NodeJS', logo: NodeJSLogo },
+  { name: 'ExpressJS', logo: ExpressJSLogo },
+  { name: 'MongoDB', logo: MongoDBLogo },
+  { name: 'Bootstrap', logo: BootstrapLogo },
+  { name: 'PHP', logo: PHPLogo },
+  { name: '.NET', logo: NetLogo },
+  { name: 'GSAP', logo: GSAPLogo },
+  { name: 'Framer Motion', logo: FramerMotionLogo },
+  { name: 'Git', logo: GitLogo },
+  { name: 'GitHub', logo: GitHubLogo },
+  { name: 'Figma', logo: FigmaLogo },
+  { name: 'VS Code', logo: VSCodeLogo },
+  { name: 'Visual Studio', logo: VSLogo }
+]
 
 const Expertise = () => {
   return (
@@ -14,11 +36,11 @@ const Expertise = () => {
             <h5>tech stacks.</h5>
             {/* Tech Icons */}
             <div className='flex items-center flex-wrap gap-1.5 mt-5'>
-              {Array.from({ length: 1 }).map((_, index) => (
-                <div className='group relative size-12 rounded-[14px] grid place-content-center border border-[#242030]/80 hover:border hover:border-indigo-400/50 transition-smooth' key={index}>
-                  <img src={JavaScriptLogo} alt="Sample Logo" className='size-8 rounded-lg z-20' />
+              {techStacks.map((item, index) => (
+                <div className='group relative size-12 rounded-[12px] grid place-content-center border border-[#242030]/80 hover:border hover:border-indigo-400/50 transition-smooth' key={index}>
+                  <img src={item.logo} alt={item.name} className='size-8 rounded-[6px] z-20' />
                   <div className='size-4 opacity-0 group-hover:opacity-100 group-hover:bg-indigo-500 bg-indigo-200/40 absolute bottom-0 -translate-x-1/2 left-1/2 blur-md transition-smooth' />
-                  <Tooltip position="-translate-x-1/2 left-1/2 -bottom-8" label='JavaScript' />
+                  <Tooltip position="-translate-x-1/2 left-1/2 -bottom-8" label={item.name} />
                 </div>
               ))}
             </div>
