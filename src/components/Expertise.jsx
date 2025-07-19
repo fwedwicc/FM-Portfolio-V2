@@ -1,5 +1,5 @@
 import React from 'react'
-import { GitHubGrid, GitHubStats } from '../components/ui'
+import { GitHubGrid, GitHubStats, GitHubLangs } from '../components/ui'
 
 const Expertise = () => {
   return (
@@ -19,16 +19,12 @@ const Expertise = () => {
           </div>
         </div>
         {/* GitHub Stats */}
-        <div>
-          <GitHubStats username="fwedwicc" />
-        </div>
+        <GitHubStats username="fwedwicc" />
       </div>
       {/* Second Row */}
       <div className='grid grid-cols-3 gap-8'>
         {/* Most used languages */}
-        <div className='border'>
-          <h5>Most used languages.</h5>
-        </div>
+        <GitHubLangs username="fwedwicc" />
         {/* GitHub Grid Contributions */}
         <div className='col-span-2 space-y-2'>
           <GitHubGrid username="fwedwicc" />
