@@ -42,30 +42,77 @@ const Experience = () => {
           markers: false,
         },
       }
-    );
+    )
 
   }, [])
 
-  return (
-    <section id='experience' className='border border-blue-500/20 space-y-16'>
-      <div className='md:px-36 px-6'>
-        {/* Education and Work */}
+  const EducationAndWork = () => {
+
+    const Container = ({ logo, title, name, setup, date, duration, shadow }) => {
+      return (
+        <div className='flex items-center gap-7'>
+          {/* Logo */}
+          <div className={`size-26 rounded-[24px] p-[1px] bg-gradient-to-b from-[#BFADEF] to-[#4F46E5] shadow-2xl shadow-blue-100/20 ${shadow}`}>
+            <div className='h-full w-full rounded-[23px] overflow-hidden'>
+              <img src={logo} alt={name} className='w-full h-full object-cover' />
+            </div>
+          </div>
+          {/* Content */}
+          <div className='space-y-2'>
+            <h5 className='leading-tight'>{title}</h5>
+            <p>{name} <span className='ms-1 text-xs text-indigo-200/90 px-[5px] py-[1px] border border-indigo-300/5 bg-indigo-400/5 rounded-lg'>{setup}</span></p>
+            <p>{date}  <span className='ms-1 text-xs text-indigo-200/90 px-[5px] py-[1px] border border-indigo-300/5 bg-indigo-400/5 rounded-lg'>{duration}</span></p>
+          </div>
+        </div>
+      )
+    }
+
+    return (
+      <div className='md:px-36 px-6 md:pt-24 pt-9'>
         <div className='grid grid-cols-2 gap-8'>
-          {/* Container: Experiences */}
-          <div className='border'>
-            <h2>experience.</h2>
-            {/* Education */}
-            <div className='mt-5'>
-              <h4>education.</h4>
-              <div className='size-20 rounded-[18px] grid place-content-center border border-green-500/20'>
-                <img src="https://placehold.co/30x30" alt="Sample Logo" className='size-12 rounded-md' />
-              </div>
-              <h5>Quezon City University</h5>
+          {/* Education */}
+          <div className='border space-y-8'>
+            <h2>education.</h2>
+            <div className='border'>
+              {/* Bestlink College of the Philippines */}
+
+              {/* Quezon CCity University */}
+
+            </div>
+          </div>
+          {/* Work Experience */}
+          <div className='border space-y-10'>
+            <h2>work experience.</h2>
+            <div className='space-y-8'>
+              {/* Tech-Commr */}
+              <Container
+                logo='https://placehold.co/30x30'
+                title='Freelance Developer & Designer'
+                name='Tech-Commr'
+                setup='Freelance'
+                date='Sep 2024 - Jan 2025'
+                duration='5mos'
+                shadow='shadow-blue-100/20'
+              />
+              {/* Behance */}
+              <Container
+                logo='https://placehold.co/30x30'
+                title='UI/UX Designer'
+                name='Behance'
+                setup='Freelance'
+                date='May 2024 - July 2025'
+                duration='2.5mos'
+                shadow='shadow-blue-500/20'
+              />
             </div>
           </div>
         </div>
       </div>
-      {/* Certifications */}
+    )
+  }
+
+  const Certifications = () => {
+    return (
       <div className='h-94 w-full px-6'>
         <div className='relative border border-[#2d283d] bg-transparent h-full rounded-4xl grid md:grid-cols-2 grid-cols-1 overflow-hidden'>
           {/* Left Glow */}
@@ -113,6 +160,15 @@ const Experience = () => {
           </div>
         </div>
       </div>
+    )
+  }
+
+  return (
+    <section id='experience' className='border border-blue-500/20 space-y-16'>
+      {/* Education and Work */}
+      <EducationAndWork />
+      {/* Certifications */}
+      <Certifications />
     </section>
   )
 }
