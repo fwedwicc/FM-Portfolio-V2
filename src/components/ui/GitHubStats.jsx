@@ -43,7 +43,7 @@ const GitHubStats = ({ username }) => {
             <FaFire className='text-indigo-900 size-4.5' />
           </div>
           <div className='w-full h-full p-4 bg-[#15131C] rounded-[34px] grid place-content-center'>
-            <h1 className='text-4xl'>{stats.currentStreak.length}</h1>
+            <h1 className='text-4xl text-center'>{stats.currentStreak.length}</h1>
             <h1 className='text-lg leading-none text-center'>days</h1>
           </div>
         </div>
@@ -53,7 +53,7 @@ const GitHubStats = ({ username }) => {
       {/* Longest Streak */}
       <div className='flex flex-col items-center justify-center gap-1'>
         <div className='p-4 grid place-content-center'>
-          <h1 className='text-4xl'>{stats.longestStreak.length}</h1>
+          <h1 className='text-4xl text-center'>{stats.longestStreak.length}</h1>
           <h1 className='text-lg leading-none text-center'>days</h1>
         </div>
         <h5>longest streak</h5>

@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react'
 import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
-import { CertificationsGlow } from '../assets/experience'
+import { BCPLogo, QCULogo, TechCommrLogo, BehanceLogo, CertificationsGlow } from '../assets/experience'
 import { Button } from './ui'
 
 gsap.registerPlugin(ScrollTrigger)
@@ -52,8 +52,8 @@ const Experience = () => {
       return (
         <div className='flex items-center gap-7'>
           {/* Logo */}
-          <div className={`size-26 rounded-[24px] p-[1px] bg-gradient-to-b from-[#BFADEF] to-[#4F46E5] shadow-2xl shadow-blue-100/20 ${shadow}`}>
-            <div className='h-full w-full rounded-[23px] overflow-hidden'>
+          <div className={`flex-shrink-0 size-30 rounded-[28px] p-[1px] bg-gradient-to-b from-[#BFADEF] to-[#4F46E5] shadow-2xl shadow-blue-100/20 ${shadow}`}>
+            <div className='h-full w-full rounded-[27px] overflow-hidden'>
               <img src={logo} alt={name} className='w-full h-full object-cover' />
             </div>
           </div>
@@ -69,34 +69,50 @@ const Experience = () => {
 
     return (
       <div className='md:px-36 px-6 md:pt-24 pt-9'>
-        <div className='grid grid-cols-2 gap-8'>
+        <div className='grid lg:grid-cols-2 grid-cols-1 gap-8'>
           {/* Education */}
-          <div className='border space-y-8'>
+          <div className='space-y-10'>
             <h2>education.</h2>
-            <div className='border'>
+            <div className='space-y-8'>
               {/* Bestlink College of the Philippines */}
-
-              {/* Quezon CCity University */}
-
+              <Container
+                logo={BCPLogo}
+                title='Information and Communications Technology'
+                name='Bestlink College of the Philippines'
+                setup='Senior High'
+                date='2019 - 2021'
+                duration='2yrs'
+                shadow='shadow-indigo-100/20'
+              />
+              {/* Quezon City University */}
+              <Container
+                logo={QCULogo}
+                title='Bachelor of Science in Information Technology'
+                name='Quezon City University'
+                setup='Tertiary'
+                date='2022 - 2026'
+                duration='5yrs'
+                shadow='shadow-indigo-100/20'
+              />
             </div>
           </div>
           {/* Work Experience */}
-          <div className='border space-y-10'>
+          <div className='space-y-10'>
             <h2>work experience.</h2>
             <div className='space-y-8'>
               {/* Tech-Commr */}
               <Container
-                logo='https://placehold.co/30x30'
+                logo={TechCommrLogo}
                 title='Freelance Developer & Designer'
                 name='Tech-Commr'
                 setup='Freelance'
                 date='Sep 2024 - Jan 2025'
                 duration='5mos'
-                shadow='shadow-blue-100/20'
+                shadow='shadow-indigo-100/20'
               />
               {/* Behance */}
               <Container
-                logo='https://placehold.co/30x30'
+                logo={BehanceLogo}
                 title='UI/UX Designer'
                 name='Behance'
                 setup='Freelance'

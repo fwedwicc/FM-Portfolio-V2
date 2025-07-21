@@ -12,7 +12,7 @@ export default function useActiveSection(sectionIds = []) {
         }
       },
       {
-        rootMargin: '0px 0px -20% 0px',
+        rootMargin: '0px 0px -40% 0px',
         threshold: 0.4,
       }
     )
