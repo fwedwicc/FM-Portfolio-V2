@@ -180,7 +180,7 @@ const Experience = () => {
   }
 
   return (
-    <section id='experience' className='border border-blue-500/20 space-y-16'>
+    <section id='experience' className='border border-blue-500 space-y-16'>
       {/* Education and Work */}
       <EducationAndWork />
       {/* Certifications */}

@@ -1,6 +1,6 @@
 import React from 'react'
 import useLenis from '../hooks/useLenis.js'
-import { Hero, About, Experience, Expertise, Sidebar } from '../components'
+import { Sidebar, Hero, About, Experience, Expertise, Project, Contact } from '../components'
 
 const Home = () => {
   useLenis()
@@ -13,6 +13,8 @@ const Home = () => {
         <About />
         <Experience />
         <Expertise />
+        <Project />
+        <Contact />
       </main>
     </>
   )
