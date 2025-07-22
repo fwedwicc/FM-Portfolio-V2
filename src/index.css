@@ -68,6 +68,20 @@ h1 {
 }
 /* ---------------- // About ---------------- */
 
+/* ---------------- Experience ---------------- */
+.certis-container-glow {
+  background: #4f46e5;
+  background: linear-gradient(
+    -90deg,
+    rgba(79, 70, 229, 1) 0%,
+    rgba(164, 136, 235, 1) 11%,
+    rgba(108, 95, 158, 1) 25%,
+    rgba(62, 56, 90, 1) 39%,
+    rgba(29, 27, 40, 1) 55%
+  );
+}
+/* ---------------- // Experience ---------------- */
+
 /* ---------------- Contact / Footer ---------------- */
 .footer-container-glow {
   background: #4f46e5;
