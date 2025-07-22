@@ -1,10 +1,35 @@
-import React from 'react'
+import React, { useEffect, useRef } from 'react'
+import gsap from 'gsap'
+import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import { Button } from './ui'
 import { FMLogo } from '../assets'
 import { CertificationsGlow } from '../assets/experience'
 import { TbPhone, TbMail, TbMapPin, TbArrowUpRight } from "react-icons/tb"
 
+gsap.registerPlugin(ScrollTrigger)
+
 const Contact = () => {
+
+  useEffect(() => {
+    gsap.fromTo(
+      '#footer',
+      { y: 150 },
+      {
+        y: 0,
+        ease: 'none',
+        duration: 3,
+        scrollTrigger: {
+          trigger: '#footer',
+          scrub: 1,
+          markers: false,
+          start: 'top 110%',
+          end: 'top 80%',
+        },
+      }
+    )
+
+  }, [])
+
   return (
     <section className='relative h-auto md:pt-24 pt-9 space-y-16 border border-orange-500/20' id='contact'>
       {/* Content */}
@@ -32,7 +57,7 @@ const Contact = () => {
         </div>
       </div>
       {/* Footer */}
-      <footer className='h-auto w-full px-6'>
+      <footer id='footer' className='h-auto w-full px-6'>
         <div className='overflow-hidden relative px-[1.5px] pt-[1.5px] footer-container-glow w-full rounded-t-4xl'>
           {/* Glow Try */}
           <img src={CertificationsGlow} alt="Glow" className='absolute left-0 w-full h-full scale-x-[-1]' />

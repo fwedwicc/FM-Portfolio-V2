@@ -8,29 +8,16 @@ gsap.registerPlugin(ScrollTrigger)
 
 const About = () => {
 
-  const sectionRef = useRef(null)
-
   useEffect(() => {
-    // const el = sectionRef.current
+    // Check if the screen width is greater than 768px (considered as mobile size)
+    const isMobile = window.innerWidth <= 768
 
-    // gsap.fromTo(
-    //   el,
-    //   { y: 100 },
-    //   {
-    //     y: -180,
-    //     ease: 'none',
-    //     duration: 3,
-    //     scrollTrigger: {
-    //       trigger: el,
-    //       toggleActions: 'restart pause reverse pause',
-    //       start: 'top bottom',
-    //       end: 'bottom top',
-    //       scrub: 1,
-    //       markers: false,
-    //     },
-    //   }
-    // )
-
+    if (isMobile) {
+      // If on mobile, kill all ScrollTrigger instances and GSAP animations
+      ScrollTrigger.getAll().forEach(trigger => trigger.kill())
+      gsap.globalTimeline.clear()
+      return
+    }
     gsap.fromTo(
       '#left-container',
       { x: -50, opacity: 0 },
