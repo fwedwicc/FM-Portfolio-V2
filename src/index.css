@@ -15,16 +15,16 @@ p {
   @apply text-indigo-100/90 text-sm;
 }
 h2 {
-  @apply text-4xl text-indigo-50;
+  @apply md:text-4xl text-3xl text-indigo-50;
 }
 h3 {
-  @apply text-3xl text-indigo-50;
+  @apply md:text-3xl text-2xl text-indigo-50;
 }
 h4 {
-  @apply text-2xl text-indigo-50;
+  @apply md:text-2xl text-xl text-indigo-50;
 }
 h5 {
-  @apply text-lg text-indigo-50;
+  @apply md:text-lg text-base text-indigo-50;
 }
 .transition-smooth {
   @apply transition-all duration-300 ease-in-out;

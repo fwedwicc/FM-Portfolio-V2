@@ -50,26 +50,26 @@ const Experience = () => {
 
     const Container = ({ logo, title, name, setup, date, duration, shadow }) => {
       return (
-        <div className='flex items-center gap-7'>
+        <div className='flex items-center md:gap-7 gap-5'>
           {/* Logo */}
-          <div className={`flex-shrink-0 size-30 rounded-[28px] p-[1px] bg-gradient-to-b from-[#BFADEF] to-[#4F46E5] shadow-2xl shadow-blue-100/20 ${shadow}`}>
-            <div className='h-full w-full rounded-[27px] overflow-hidden'>
+          <div className={`flex-shrink-0 md:size-30 size-26 md:rounded-[28px] rounded-[25px] p-[1px] bg-gradient-to-b from-[#BFADEF] to-[#4F46E5] shadow-2xl shadow-blue-100/20 ${shadow}`}>
+            <div className='h-full w-full md:rounded-[27px] rounded-[24px] overflow-hidden'>
               <img src={logo} alt={name} className='w-full h-full object-cover' />
             </div>
           </div>
           {/* Content */}
-          <div className='space-y-2'>
+          <div className='md:pace-y-2 space-y-3'>
             <h5 className='leading-tight'>{title}</h5>
-            <p>{name} <span className='ms-1 text-xs text-indigo-200/90 px-[5px] py-[1px] border border-indigo-300/5 bg-indigo-400/5 rounded-lg'>{setup}</span></p>
-            <p>{date}  <span className='ms-1 text-xs text-indigo-200/90 px-[5px] py-[1px] border border-indigo-300/5 bg-indigo-400/5 rounded-lg'>{duration}</span></p>
+            <span className='block md:text-sm text-xs text-indigo-100/90'>{name} <span className='ms-1 text-xs text-indigo-200/90 px-[5px] py-[1px] border border-indigo-300/5 bg-indigo-400/5 rounded-lg'>{setup}</span></span>
+            <span className='block md:text-sm text-xs text-indigo-100/90'>{date}  <span className='ms-1 text-xs text-indigo-200/90 px-[5px] py-[1px] border border-indigo-300/5 bg-indigo-400/5 rounded-lg'>{duration}</span></span>
           </div>
         </div>
       )
     }
 
     return (
-      <div className='md:px-36 px-6 md:pt-24 pt-9'>
-        <div className='grid lg:grid-cols-2 grid-cols-1 gap-8'>
+      <div className='lg:px-36 md:px-28 px-4 md:pt-24 pt-4 py-4'>
+        <div className='grid lg:grid-cols-2 grid-cols-1 md:gap-8 gap-12'>
           {/* Education */}
           <div className='space-y-10'>
             <h2>education.</h2>
@@ -77,7 +77,7 @@ const Experience = () => {
               {/* Bestlink College of the Philippines */}
               <Container
                 logo={BCPLogo}
-                title='Information and Communications Technology'
+                title='Info. and Comm. Technology'
                 name='Bestlink College of the Philippines'
                 setup='Senior High'
                 date='2019 - 2021'
@@ -87,7 +87,7 @@ const Experience = () => {
               {/* Quezon City University */}
               <Container
                 logo={QCULogo}
-                title='Bachelor of Science in Information Technology'
+                title='BS in Information Technology'
                 name='Quezon City University'
                 setup='Tertiary'
                 date='2022 - 2026'
@@ -116,8 +116,8 @@ const Experience = () => {
                 title='UI/UX Designer'
                 name='Behance'
                 setup='Freelance'
-                date='May 2024 - July 2025'
-                duration='2.5mos'
+                date='May 2024 - Jul 2025'
+                duration='3mos'
                 shadow='shadow-blue-500/20'
               />
             </div>
@@ -129,16 +129,16 @@ const Experience = () => {
 
   const Certifications = () => {
     return (
-      <div className='h-94 w-full px-6'>
-        <div className='p-[1.5px] h-full certis-container-glow rounded-4xl'>
+      <div className='md:h-94 h-[20rem] w-full md:px-6 px-4'>
+        <div className='md:p-[1.5px] p-[1px] h-full certis-container-glow rounded-4xl'>
           <div className='relative bg-[#1d1b28] w-full h-full rounded-[31px] grid md:grid-cols-2 grid-cols-1 overflow-hidden'>
             {/* Left Glow */}
-            <img src={CertificationsGlow} alt="Left Glow" className='absolute left-0 h-full w-auto z-10' />
+            <img src={CertificationsGlow} alt="Left Glow" className='absolute h-full w-[300rem] z-10' />
             {/* Right Glow */}
             <div className='absolute right-0 bottom-0 size-64 rounded-lg bg-indigo-500/20 blur-3xl z-10' />
             {/* Left Content */}
-            <div className='z-20 p-30 space-y-4'>
-              <span className='block text-4xl text-[#15131C] font-bold'>certifications.</span>
+            <div className='z-30 lg:p-30 md:p-22 p-6 space-y-4'>
+              <span className='block md:text-4xl text-3xl text-[#15131C] font-bold'>certifications.</span>
               <span className='block text-sm text-[#15131C] font-bold w-full max-w-xs'>Lorem, ipsum dolor sit amet consecur adipicing elit. Nisi beatae nobis nihil minima.</span>
               <Button variant="secondary" label="View certificates" />
             </div>
@@ -182,7 +182,7 @@ const Experience = () => {
   }
 
   return (
-    <section id='experience' className='border border-blue-500/20 space-y-16'>
+    <section id='experience' className='border border-blue-500/20 md:space-y-16 space-y-12 mt-14'>
       {/* Education and Work */}
       <EducationAndWork />
       {/* Certifications */}

@@ -69,7 +69,7 @@ const About = () => {
   }
 
   return (
-    <section className='lg:px-36 md:px-24 px-4 md:py-24 py-4 md:overflow-visible overflow-hidden' id='about'>
+    <section className='lg:px-36 md:px-28 px-4 md:py-24 py-4 md:overflow-visible overflow-hidden' id='about'>
       <div className='grid lg:grid-cols-3 grid-cols-1 gap-4'>
         {/* 'who am i?' */}
         <GlowContainer id='left-container' variant='left' styles='lg:col-span-2 col-span-auto'>
