@@ -1,6 +1,6 @@
 import React from 'react'
-import { RiHome5Line, RiUser6Line, RiAwardLine, RiSendPlane2Line, RiBriefcaseLine } from "react-icons/ri"
-import { TbSmartHome, TbBriefcase2, TbMail, TbBrandTabler } from "react-icons/tb"
+import { RiUser6Line, RiAwardLine } from "react-icons/ri"
+import { TbSmartHome, TbBriefcase2, TbMail, TbBrandTabler, TbMenu } from "react-icons/tb"
 import useActiveSection from '../hooks/useActiveSection'
 import { Tooltip } from './ui'
 
@@ -26,8 +26,13 @@ const Sidebar = () => {
   ]
 
   return (
-    <aside className='px-6 border border-green-500/20 fixed h-screen flex items-center z-50'>
-      <div className='flex flex-col gap-1 border border-[#1e1b29] bg-[#15131C] p-1 rounded-[18px]'>
+    <aside className='md:p-6 p-4 fixed h-screen flex md:items-center items-start z-50'>
+      {/* Toggle for Small Screens */}
+      <button className='md:hidden flex items-center justify-center size-11 rounded-[14px] group transition-smooth bg-[#111017] border border-[#201e2c]'>
+        <TbMenu className='size-5 stroke-[1.3px] text-white' />
+      </button>
+      {/* For Medium to Large Screens */}
+      <div className='md:flex hidden flex-col gap-1 border border-[#1e1b29] bg-[#15131C] p-1 rounded-[18px]'>
         {navItems.map(({ id, icon, label }) => (
           <div className='inline-flex group relative transition-smooth' key={id}>
             <a href={`#${id}`} onClick={(e) => scrollToSection(e, `#${id}`)}

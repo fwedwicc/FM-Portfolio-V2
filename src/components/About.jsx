@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from 'react'
+import React, { useEffect } from 'react'
 import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import { TbCode } from "react-icons/tb"
@@ -9,11 +9,9 @@ gsap.registerPlugin(ScrollTrigger)
 const About = () => {
 
   useEffect(() => {
-    // Check if the screen width is greater than 768px (considered as mobile size)
     const isMobile = window.innerWidth <= 768
 
     if (isMobile) {
-      // If on mobile, kill all ScrollTrigger instances and GSAP animations
       ScrollTrigger.getAll().forEach(trigger => trigger.kill())
       gsap.globalTimeline.clear()
       return
@@ -71,10 +69,10 @@ const About = () => {
   }
 
   return (
-    <section className='md:px-36 px-6 md:py-24 py-9 border border-amber-500/20' id='about'>
-      <div className='grid md:grid-cols-3 grid-cols-1 gap-4'>
+    <section className='lg:px-36 md:px-24 px-4 md:py-24 py-4 md:overflow-visible overflow-hidden' id='about'>
+      <div className='grid lg:grid-cols-3 grid-cols-1 gap-4'>
         {/* 'who am i?' */}
-        <GlowContainer id='left-container' variant='left' styles='md:col-span-2 col-span-auto'>
+        <GlowContainer id='left-container' variant='left' styles='lg:col-span-2 col-span-auto'>
           <div className='p-8 w-full h-full bg-[#15131C] rounded-[31px]'>
             <div className='space-y-4'>
               <h2>who am i?</h2>
@@ -84,7 +82,7 @@ const About = () => {
         </GlowContainer>
         {/* Profile */}
         <GlowContainer id='right-container' variant='right'>
-          <div className='relative w-full h-full bg-[#15131C] rounded-[31px] overflow-hidden'>
+          <div className='relative w-full lg:h-full h-64 bg-[#15131C] rounded-[31px] overflow-hidden'>
             {/* Image */}
             <img src="https://avatars.githubusercontent.com/u/149291942?v=4" alt="Sample Profile" className='absolute top-0 left-0 object-cover w-full h-full' />
             {/* Blur Effect */}

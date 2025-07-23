@@ -5,7 +5,7 @@ import { Sidebar, Hero, About, Experience, Expertise, Project, Contact } from '.
 
 const Home = () => {
   useLenis()
-  useKillAnimations()
+  // useKillAnimations()
 
   return (
     <>
@@ -13,10 +13,10 @@ const Home = () => {
       <main>
         <Hero />
         <About />
-        <Experience />
+        {/* <Experience />
         <Expertise />
         <Project />
-        <Contact />
+        <Contact /> */}
       </main>
     </>
   )
