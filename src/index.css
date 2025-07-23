@@ -108,4 +108,11 @@ h1 {
 .animate-spin-gradient {
   animation: spin-slow-gradient 8s linear infinite;
 }
+.split-parent {
+  overflow: hidden;
+  display: block;
+}
+.split-line {
+  display: block;
+}
 /* ---------------- // Testing ---------------- */
