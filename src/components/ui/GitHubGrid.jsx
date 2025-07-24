@@ -33,7 +33,7 @@ const GitHubGrid = ({ username }) => {
           {week.map((day, dayIndex) => (
             <div className='group relative transition-smooth' key={dayIndex}>
               <div
-                className={`size-3.5 rounded-sm ${levelColorMap[day.level]}`}
+                className={`md:size-3.5 size-2.5 md:rounded-sm rounded-[3px] ${levelColorMap[day.level]}`}
               />
               <Tooltip position='-translate-x-1/2 left-1/2 top-4 z-50 absolute' label={`${day.date}: ${day.count} contributions`} />
             </div>

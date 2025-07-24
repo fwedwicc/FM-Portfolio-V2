@@ -26,7 +26,7 @@ const GitHubStats = ({ username }) => {
   if (!stats) return <p>Loading GitHub stats...</p>
 
   return (
-    <div className='grid grid-cols-3 pt-2 gap-3'>
+    <div className='grid md:grid-cols-3 grid-cols-1 pt-2 gap-3'>
       {/* Contributions */}
       <div className='flex flex-col items-center justify-center gap-1'>
         <div className='p-4 grid place-content-center'>

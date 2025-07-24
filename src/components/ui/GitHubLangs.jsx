@@ -24,7 +24,7 @@ export default function GitHubLangs() {
   if (loading) return <p>Loading language stats...</p>
 
   return (
-    <div>
+    <div className='md:p-0 p-3'>
       <div className="w-full h-2 bg-[#1e1e2e] rounded-full mb-4">
         <div className="h-full flex gap-[1px] relative">
           {languages.map((lang, index) => (
@@ -38,11 +38,11 @@ export default function GitHubLangs() {
           ))}
         </div>
       </div>
-      <div className="grid grid-cols-2 gap-y-2 gap-x-4 text-sm text-white/80">
+      <div className="grid grid-cols-2 gap-y-2 gap-x-4 md:text-sm text-xs text-white/80">
         {languages.map((lang, index) => (
           <div key={index} className="flex items-center gap-2.5">
             <span
-              className={`inline-block size-2.5 rounded-sm ${getColor(lang.language)}`}
+              className={`shrink-0 inline-block size-2.5 rounded-sm ${getColor(lang.language)}`}
             />
             {lang.language} <span className='text-xs text-indigo-200/90 px-[5px] py-[1px] border border-indigo-300/5 bg-indigo-400/5 rounded-lg'>{lang.percentage}%</span>
           </div>

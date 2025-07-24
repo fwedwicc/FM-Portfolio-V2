@@ -26,7 +26,7 @@ const Sidebar = () => {
   ]
 
   return (
-    <aside className='md:p-6 p-4 fixed h-screen flex md:items-center items-start z-50'>
+    <aside className='md:p-6 p-4 fixed h-screen top-0 left-0 flex md:items-center items-start z-50'>
       {/* Toggle for Small Screens */}
       <button className='md:hidden flex items-center justify-center size-11 rounded-[14px] group transition-smooth bg-[#111017] border border-[#201e2c]'>
         <TbMenu className='size-5 stroke-[1.3px] text-white' />

@@ -26,16 +26,15 @@ const techStacks = [
 
 const Expertise = () => {
   return (
-    <section id='expertise' className='md:px-36 px-6 md:py-24 py-9 space-y-10 border border-blue-500/20'>
-      {/* <h2 className='text-center pb-6'>expertise.</h2> */}
+    <section id='expertise' className='lg:px-36 md:px-28 px-4 md:py-24 py-4 space-y-10 md:mt-0 mt-16'>
       {/* First Row */}
-      <div className='grid grid-cols-2 gap-7'>
+      <div className='grid lg:grid-cols-2 grid-cols-1 gap-7'>
         {/* Tech Stacks */}
-        <div className='rounded-4xl p-[1px] bg-gradient-to-b from-[#BFADEF] to-[#4F46E5] shadow-2xl shadow-indigo-500/10'>
-          <div className='h-full w-full p-8 bg-[#15131b] rounded-[31px]'>
+        <div className='lg:order-1 order-2 rounded-4xl p-[1px] bg-gradient-to-b from-[#BFADEF] to-[#4F46E5] shadow-2xl shadow-indigo-500/10'>
+          <div className='h-full w-full md:p-8 p-6 bg-[#15131b] rounded-[31px]'>
             <h5>tech stacks.</h5>
             {/* Tech Icons */}
-            <div className='flex items-center flex-wrap gap-1.5 mt-5'>
+            <div className='flex items-center justify-center flex-wrap gap-1.5 mt-5'>
               {techStacks.map((item, index) => (
                 <div className='group relative size-12 rounded-[12px] grid place-content-center border border-[#242030]/80 hover:border hover:border-indigo-400/50 transition-smooth' key={index}>
                   <img src={item.logo} alt={item.name} className='size-8 rounded-[6px] z-20' />
@@ -47,14 +46,16 @@ const Expertise = () => {
           </div>
         </div>
         {/* GitHub Stats */}
-        <GitHubStats username="fwedwicc" />
+        <div className='lg:order-2 order-1'>
+          <GitHubStats username="fwedwicc" />
+        </div>
       </div>
       {/* Second Row */}
-      <div className='grid grid-cols-3 gap-8'>
+      <div className='grid lg:grid-cols-3 grid-cols-1 gap-8'>
         {/* Most used languages */}
         <GitHubLangs username="fwedwicc" />
         {/* GitHub Grid Contributions */}
-        <div className='col-span-2 space-y-2'>
+        <div className='md:col-span-2 col-span-auto space-y-2'>
           <GitHubGrid username="fwedwicc" />
           <div className='flex items-center gap-2'>
             <span className='text-xs text-indigo-100'>Less</span>

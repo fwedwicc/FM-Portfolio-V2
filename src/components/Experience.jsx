@@ -182,7 +182,7 @@ const Experience = () => {
   }
 
   return (
-    <section id='experience' className='border border-blue-500/20 md:space-y-16 space-y-12 mt-14'>
+    <section id='experience' className='md:space-y-16 space-y-10 md:mt-0 mt-14'>
       {/* Education and Work */}
       <EducationAndWork />
       {/* Certifications */}
