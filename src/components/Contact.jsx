@@ -13,7 +13,7 @@ const Contact = () => {
         {/* Left Contents */}
         <div className='space-y-7'>
           <div className='flex flex-col space-y-1.5'>
-            <h1 className='text-[65px] mb-2'>get in touch.</h1>
+            <h1 id='text-animation' className='text-[65px] mb-2'>get in touch.</h1>
             {[
               { label: 'moreno.frederick.capiral@gmail.com', icon: <TbMail className='size-4.5 stroke-[1.4px]' /> },
               { label: '+63 921 432 3915', icon: <TbPhone className='size-4.5 stroke-[1.4px]' /> },
@@ -48,10 +48,10 @@ const Contact = () => {
               </div>
               <div className='space-y-1'>
                 <span className='flex items-center gap-1 group'>
-                  <h2>FM © 2025</h2>
+                  <h2 id='text-animation'>FM © 2025</h2>
                   <TbArrowUpRight className='text-indigo-100 group-hover:text-indigo-400 transition-smooth size-12 stroke-[1.4px]' />
                 </span>
-                <p>Developed and designed by <span className='text-indigo-400'>Frederick Moreno</span>.</p>
+                <p id='text-animation'>Developed and designed by <span className='text-indigo-400'>Frederick Moreno</span>.</p>
               </div>
             </div>
             {/* Links */}

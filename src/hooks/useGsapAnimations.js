@@ -250,6 +250,41 @@ const useGsapAnimations = () => {
 
     // ------------------ Expertise Animations ------------------
 
+    gsap.fromTo(
+      '#expts-contents',
+      { y: 80, opacity: 0 },
+      {
+        y: 0,
+        opacity: 1,
+        ease: 'none',
+        duration: 3,
+        scrollTrigger: {
+          trigger: '#expts-contents',
+          scrub: 1,
+          start: 'top 100%',
+          end: 'top 40%',
+          markers: false,
+        },
+      }
+    )
+
+    // gsap.fromTo(
+    //   '#github-grid',
+    //   { width: '50%' },
+    //   {
+    //     width: '100%',
+    //     ease: 'none',
+    //     duration: 3,
+    //     scrollTrigger: {
+    //       trigger: '#github-grid',
+    //       scrub: 1,
+    //       start: 'top 100%',
+    //       end: 'top 40%',
+    //       markers: true,
+    //     },
+    //   }
+    // )
+
     // ------------------ // Expertise Animations ------------------
 
     // ------------------ Projects Animations ------------------
@@ -260,7 +295,7 @@ const useGsapAnimations = () => {
 
     gsap.fromTo(
       '#contact-footer',
-      { y: 150 },
+      { y: 60 },
       {
         y: 0,
         ease: 'none',
@@ -269,7 +304,7 @@ const useGsapAnimations = () => {
           trigger: '#contact-footer',
           scrub: 1,
           markers: false,
-          start: 'top 110%',
+          start: 'top 100%',
           end: 'top 80%',
         },
       }

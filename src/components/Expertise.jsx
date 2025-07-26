@@ -28,11 +28,11 @@ const Expertise = () => {
   return (
     <section id='expertise' className='lg:px-36 md:px-28 px-4 md:py-24 py-4 space-y-10 md:mt-0 mt-16'>
       {/* First Row */}
-      <div className='grid lg:grid-cols-2 grid-cols-1 gap-7'>
+      <div id='expts-contents' className='grid lg:grid-cols-2 grid-cols-1 gap-7'>
         {/* Tech Stacks */}
         <div className='lg:order-1 order-2 rounded-4xl p-[1px] bg-gradient-to-b from-[#BFADEF] to-[#4F46E5] shadow-2xl shadow-indigo-500/10'>
           <div className='h-full w-full md:p-8 p-6 bg-[#15131b] rounded-[31px]'>
-            <h5>tech stacks.</h5>
+            <h5 id='text-animation'>tech stacks.</h5>
             {/* Tech Icons */}
             <div className='flex items-center justify-center flex-wrap gap-1.5 mt-5'>
               {techStacks.map((item, index) => (
@@ -51,7 +51,7 @@ const Expertise = () => {
         </div>
       </div>
       {/* Second Row */}
-      <div className='grid lg:grid-cols-3 grid-cols-1 gap-8'>
+      <div id='expts-contents' className='grid lg:grid-cols-3 grid-cols-1 gap-8'>
         {/* Most used languages */}
         <GitHubLangs username="fwedwicc" />
         {/* GitHub Grid Contributions */}
