@@ -61,7 +61,7 @@ const Hero = () => {
             </div>
           </div>
           {/* Heading */}
-          <h1 id='heading-1' className='md:text-[60px] text-[45px] text-center'>i design and build</h1>
+          <h1 id='hero-heading-1' className='md:text-[60px] text-[45px] text-center'>i design and build</h1>
         </div>
       </section>
     </>

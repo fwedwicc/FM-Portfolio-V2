@@ -23,7 +23,7 @@ const About = () => {
     <section className='lg:px-36 md:px-28 px-4 md:py-24 py-4 md:overflow-visible overflow-hidden' id='about'>
       <div className='grid lg:grid-cols-3 grid-cols-1 gap-4'>
         {/* 'who am i?' */}
-        <GlowContainer id='left-container' variant='left' styles='lg:col-span-2 col-span-auto'>
+        <GlowContainer id='about-left-container' variant='left' styles='lg:col-span-2 col-span-auto'>
           <div className='p-8 w-full h-full bg-[#15131C] rounded-[31px]'>
             <div className='space-y-4'>
               <h2 id='text-animation'>who am i?</h2>
@@ -32,7 +32,7 @@ const About = () => {
           </div>
         </GlowContainer>
         {/* Profile */}
-        <GlowContainer id='right-container' variant='right'>
+        <GlowContainer id='about-right-container' variant='right'>
           <div className='relative w-full lg:h-full h-64 bg-[#15131C] rounded-[31px] overflow-hidden'>
             {/* Image */}
             <img src="https://avatars.githubusercontent.com/u/149291942?v=4" alt="Sample Profile" className='absolute top-0 left-0 object-cover w-full h-full opacity-40' />
@@ -46,7 +46,7 @@ const About = () => {
           </div>
         </GlowContainer>
         {/* 'i design' */}
-        <GlowContainer id='left-container' variant='left'>
+        <GlowContainer id='about-left-container' variant='left'>
           <div className='p-8 w-full h-full bg-[#15131C] rounded-[31px]'>
             <div className='space-y-4'>
               <div className='inline-flex p-4 rounded-[19px] border border-[#1d1b28] group-hover:border-[#211f2d] shadow-[#110f17] group-hover:shadow-xl transition-smooth'>
@@ -73,7 +73,7 @@ const About = () => {
           </div>
         </div>
         {/* 'beyond field' */}
-        <GlowContainer id='right-container' variant='right'>
+        <GlowContainer id='about-right-container' variant='right'>
           <div className='p-8 w-full h-full bg-[#15131C] rounded-[31px]'>
             <div className='space-y-4'>
               <h2 id='text-animation'>beyond field.</h2>

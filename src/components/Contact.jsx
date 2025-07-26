@@ -33,7 +33,7 @@ const Contact = () => {
         </div>
       </div>
       {/* Footer */}
-      <footer id='footer' className='h-auto w-full px-6'>
+      <footer id='contact-footer' className='h-auto w-full px-6'>
         <div className='overflow-hidden relative px-[1.5px] pt-[1.5px] footer-container-glow w-full rounded-t-4xl'>
           {/* Glow Try */}
           <img src={CertificationsGlow} alt="Glow" className='absolute left-0 w-full h-full scale-x-[-1]' />

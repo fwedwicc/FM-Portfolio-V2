@@ -42,7 +42,7 @@ const useGsapAnimations = () => {
         stagger: 0.15,
         scrollTrigger: {
           trigger: heading,
-          start: 'top 90%',
+          start: 'top 95%',
           toggleActions: 'play none none reverse',
           markers: false,
         },
@@ -120,7 +120,7 @@ const useGsapAnimations = () => {
     // )
     // Heading Animation
     gsap.fromTo(
-      '#heading-1',
+      '#hero-heading-1',
       { y: 0, opacity: 100 },
       {
         y: 150,
@@ -128,7 +128,7 @@ const useGsapAnimations = () => {
         ease: 'none',
         duration: 3,
         scrollTrigger: {
-          trigger: '#heading-1',
+          trigger: '#hero-heading-1',
           scrub: 1,
           markers: false,
           start: 'top 50%',
@@ -142,7 +142,7 @@ const useGsapAnimations = () => {
     // ------------------ About Animations ------------------
 
     gsap.fromTo(
-      '#left-container',
+      '#about-left-container',
       { x: -50, opacity: 0 },
       {
         x: 0,
@@ -150,7 +150,7 @@ const useGsapAnimations = () => {
         ease: 'none',
         duration: 3,
         scrollTrigger: {
-          trigger: '#left-container',
+          trigger: '#about-left-container',
           scrub: 1,
           markers: false,
           start: 'top 120%',
@@ -159,7 +159,7 @@ const useGsapAnimations = () => {
       }
     )
     gsap.fromTo(
-      '#right-container',
+      '#about-right-container',
       { x: 50, opacity: 0 },
       {
         x: 0,
@@ -167,7 +167,7 @@ const useGsapAnimations = () => {
         ease: 'none',
         duration: 3,
         scrollTrigger: {
-          trigger: '#right-container',
+          trigger: '#about-right-container',
           scrub: 1,
           markers: false,
           start: 'top 120%',
@@ -179,6 +179,72 @@ const useGsapAnimations = () => {
     // ------------------ // About Animations ------------------
 
     // ------------------ Experience Animations ------------------
+
+    gsap.fromTo(
+      '#exp-contents',
+      { y: 80, opacity: 0 },
+      {
+        y: 0,
+        opacity: 1,
+        ease: 'none',
+        duration: 3,
+        scrollTrigger: {
+          trigger: '#exp-contents',
+          scrub: 1,
+          start: 'top 100%',
+          end: 'top 40%',
+          markers: false,
+        },
+      }
+    )
+    gsap.fromTo(
+      '#exp-certs',
+      { width: '90%' },
+      {
+        width: '100%',
+        ease: 'none',
+        duration: 3,
+        scrollTrigger: {
+          trigger: '#exp-certs',
+          scrub: 1,
+          start: 'top 100%',
+          end: 'top 40%',
+          markers: false,
+        },
+      }
+    )
+    gsap.fromTo(
+      '#exp-top',
+      { height: '0' },
+      {
+        height: '100px',
+        ease: 'none',
+        duration: 3,
+        scrollTrigger: {
+          trigger: '#exp-top',
+          scrub: 1,
+          markers: false,
+          start: 'top 90%',
+          end: 'bottom -40%',
+        },
+      }
+    )
+    gsap.fromTo(
+      '#exp-bottom',
+      { height: '100px' },
+      {
+        height: '0px',
+        ease: 'none',
+        duration: 3,
+        scrollTrigger: {
+          trigger: '#exp-bottom',
+          scrub: 1,
+          start: 'top 90%',
+          end: 'bottom -40%',
+          markers: false,
+        },
+      }
+    )
 
     // ------------------ // Experience Animations ------------------
 
@@ -193,14 +259,14 @@ const useGsapAnimations = () => {
     // ------------------ Contact/Footer Animations ------------------
 
     gsap.fromTo(
-      '#footer',
+      '#contact-footer',
       { y: 150 },
       {
         y: 0,
         ease: 'none',
         duration: 3,
         scrollTrigger: {
-          trigger: '#footer',
+          trigger: '#contact-footer',
           scrub: 1,
           markers: false,
           start: 'top 110%',
