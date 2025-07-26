@@ -1,99 +1,10 @@
-import React, { useRef, useEffect } from 'react'
-import gsap from 'gsap'
-import { ScrollTrigger } from 'gsap/ScrollTrigger'
+import React from 'react'
 import { FaBehance, FaDribbble, FaLinkedinIn, FaGithub } from "react-icons/fa"
 import { FMLogo } from '../assets'
 import { HeroGrid, HeroGlow } from '../assets/hero'
 import { Button } from '../components/ui'
 
-gsap.registerPlugin(ScrollTrigger)
-
 const Hero = () => {
-
-  useEffect(() => {
-    // Social Links Animation
-    gsap.fromTo(
-      '#social-links',
-      { x: 0 },
-      {
-        x: -150,
-        ease: 'none',
-        duration: 3,
-        scrollTrigger: {
-          trigger: '#social-links',
-          scrub: 1,
-          markers: false,
-          start: 'top 0%',
-          end: 'top -20%',
-        },
-      }
-    )
-    // CTA Animation
-    gsap.fromTo(
-      '#CTAs',
-      { x: 0 },
-      {
-        x: 150,
-        ease: 'none',
-        duration: 3,
-        scrollTrigger: {
-          trigger: '#CTAs',
-          scrub: 1,
-          markers: false,
-          start: 'top 0%',
-          end: 'top -20%',
-        },
-      }
-    )
-    // Disable ko muna nag lalag lappyyy
-    // gsap.fromTo(
-    //   '#hero-logo',
-    //   { scale: 1 },
-    //   {
-    //     scale: 2,
-    //     scrollTrigger: {
-    //       trigger: '#hero-logo',
-    //       start: 'top 20%',
-    //       end: 'top -120%',
-    //       scrub: 1,
-    //       markers: false
-    //     },
-    //   }
-    // )
-    // Tryyy hero grid
-    // gsap.fromTo(
-    //   '#hero-grid',
-    //   { scale: 1 },
-    //   {
-    //     scale: 2,
-    //     scrollTrigger: {
-    //       trigger: '#hero-grid',
-    //       start: 'top 20%',
-    //       end: 'top -120%',
-    //       scrub: 1,
-    //       markers: false
-    //     },
-    //   }
-    // )
-    // Heading Animation
-    gsap.fromTo(
-      '#heading-1',
-      { y: 0, opacity: 100 },
-      {
-        y: 150,
-        opacity: 10,
-        ease: 'none',
-        duration: 3,
-        scrollTrigger: {
-          trigger: '#heading-1',
-          scrub: 1,
-          markers: false,
-          start: 'top 50%',
-          end: 'top -5%',
-        },
-      }
-    )
-  }, [])
 
   // Header Component
   const Header = () => {

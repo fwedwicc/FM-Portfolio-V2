@@ -1,34 +1,10 @@
-import React, { useEffect, useRef } from 'react'
-import gsap from 'gsap'
-import { ScrollTrigger } from 'gsap/ScrollTrigger'
+import React from 'react'
 import { Button } from './ui'
 import { FMLogo } from '../assets'
 import { CertificationsGlow } from '../assets/experience'
 import { TbPhone, TbMail, TbMapPin, TbArrowUpRight } from "react-icons/tb"
 
-gsap.registerPlugin(ScrollTrigger)
-
 const Contact = () => {
-
-  useEffect(() => {
-    gsap.fromTo(
-      '#footer',
-      { y: 150 },
-      {
-        y: 0,
-        ease: 'none',
-        duration: 3,
-        scrollTrigger: {
-          trigger: '#footer',
-          scrub: 1,
-          markers: false,
-          start: 'top 110%',
-          end: 'top 80%',
-        },
-      }
-    )
-
-  }, [])
 
   return (
     <section className='relative h-auto md:pt-24 pt-9 space-y-16 border border-orange-500/20' id='contact'>

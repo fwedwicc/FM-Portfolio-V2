@@ -131,9 +131,9 @@ const Experience = () => {
     return (
       <div className='md:h-94 h-[20rem] w-full md:px-6 px-4'>
         <div className='md:p-[1.5px] p-[1px] h-full certis-container-glow rounded-4xl'>
-          <div className='relative bg-[#1d1b28] w-full h-full rounded-[31px] grid md:grid-cols-2 grid-cols-1 overflow-hidden'>
+          <div className='relative bg-[#15131C] w-full h-full rounded-[31px] grid md:grid-cols-2 grid-cols-1 overflow-hidden'>
             {/* Left Glow */}
-            <img src={CertificationsGlow} alt="Left Glow" className='absolute h-full w-[300rem] z-10' />
+            <img src={CertificationsGlow} alt="Left Glow" className='absolute h-full w-auto z-10' />
             {/* Right Glow */}
             <div className='absolute right-0 bottom-0 size-64 rounded-lg bg-indigo-500/20 blur-3xl z-10' />
             {/* Left Content */}
