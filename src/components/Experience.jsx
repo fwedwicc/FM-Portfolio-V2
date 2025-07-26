@@ -2,8 +2,8 @@ import React, { useEffect } from 'react'
 import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import { BCPLogo, QCULogo, TechCommrLogo, BehanceLogo, CertificationsGlow } from '../assets/experience'
+import { cert01, cert02, cert03, cert04, cert05, cert06, cert07, cert08, cert09, cert10, cert11, cert12, cert13, cert14, cert15 } from '../assets/certifications'
 import { Button } from './ui'
-
 gsap.registerPlugin(ScrollTrigger)
 
 const Experience = () => {
@@ -22,7 +22,7 @@ const Experience = () => {
           scrub: 1,
           markers: false,
           start: 'top 90%',
-          end: 'bottom -30%',
+          end: 'bottom -40%',
         },
       }
     )
@@ -38,7 +38,7 @@ const Experience = () => {
           trigger: '#bottom',
           scrub: 1,
           start: 'top 90%',
-          end: 'bottom -30%',
+          end: 'bottom -40%',
           markers: false,
         },
       }
@@ -143,36 +143,37 @@ const Experience = () => {
               <Button variant="secondary" label="View certificates" />
             </div>
             {/* Right Content */}
-            <div className='grid grid-cols-3 gap-7 lg:pr-16 md:pr-0'>
+            <div className='grid grid-cols-3 gap-7 lg:pr-36 md:pr-0'>
               {/* First Column */}
-              <div className='border flex flex-col justify-start items-start gap-2 -skew-x-36 -mt-20'>
-                <div id='bottom' className='h-auto border' />
-                <img src="https://placehold.co/30x17" alt="" className='h-auto w-full bg-green-500/20' />
-                <img src="https://placehold.co/30x17" alt="" className='h-auto w-full bg-green-500/20' />
-                <img src="https://placehold.co/30x17" alt="" className='h-auto w-full bg-green-500/20' />
-                <img src="https://placehold.co/30x17" alt="" className='h-auto w-full bg-green-500/20' />
-                <img src="https://placehold.co/30x17" alt="" className='h-auto w-full bg-green-500/20' />
-                <img src="https://placehold.co/30x17" alt="" className='h-auto w-full bg-green-500/20' />
+              <div className='flex flex-col justify-start items-start gap-2 -skew-x-36 -mt-20'>
+                <div id='bottom' className='h-auto' />
+                <img src={cert01} alt="Certificate 1" className='h-auto w-full' />
+                <img src={cert02} alt="Certificate 2" className='h-auto w-full' />
+                <img src={cert03} alt="Certificate 3" className='h-auto w-full' />
+                <img src={cert04} alt="Certificate 4" className='h-auto w-full' />
+                <img src={cert05} alt="Certificate 5" className='h-auto w-full' />
+                <img src={cert06} alt="Certificate 6" className='h-auto w-full' />
               </div>
-              <div className='border flex flex-col gap-2 -skew-x-36 -mt-32'>
+              <div className='flex flex-col gap-2 -skew-x-36 -mt-32'>
                 <div id="top" className="h-auto" />
-                <img src="https://placehold.co/30x17" alt="" className='h-auto w-full bg-green-500/20' />
-                <img src="https://placehold.co/30x17" alt="" className='h-auto w-full bg-green-500/20' />
-                <img src="https://placehold.co/30x17" alt="" className='h-auto w-full bg-green-500/20' />
-                <img src="https://placehold.co/30x17" alt="" className='h-auto w-full bg-green-500/20' />
-                <img src="https://placehold.co/30x17" alt="" className='h-auto w-full bg-green-500/20' />
-                <img src="https://placehold.co/30x17" alt="" className='h-auto w-full bg-green-500/20' />
+                <img src={cert07} alt="Certificate 7" className='h-auto w-full' />
+                <img src={cert08} alt="Certificate 8" className='h-auto w-full' />
+                <img src={cert09} alt="Certificate 9" className='h-auto w-full' />
+                <img src={cert10} alt="Certificate 10" className='h-auto w-full' />
+                <img src={cert11} alt="Certificate 11" className='h-auto w-full' />
+                <img src={cert12} alt="Certificate 12" className='h-auto w-full' />
               </div>
-              <div className='border flex flex-col justify-start items-start gap-2 -skew-x-36 -mt-44'>
-                <div id='bottom' className='h-auto border' />
-                <img src="https://placehold.co/30x17" alt="" className='h-auto w-full bg-green-500/20' />
-                <img src="https://placehold.co/30x17" alt="" className='h-auto w-full bg-green-500/20' />
-                <img src="https://placehold.co/30x17" alt="" className='h-auto w-full bg-green-500/20' />
-                <img src="https://placehold.co/30x17" alt="" className='h-auto w-full bg-green-500/20' />
-                <img src="https://placehold.co/30x17" alt="" className='h-auto w-full bg-green-500/20' />
-                <img src="https://placehold.co/30x17" alt="" className='h-auto w-full bg-green-500/20' />
-                <img src="https://placehold.co/30x17" alt="" className='h-auto w-full bg-green-500/20' />
-                <img src="https://placehold.co/30x17" alt="" className='h-auto w-full bg-green-500/20' />
+              <div className='flex flex-col justify-start items-start gap-2 -skew-x-36 -mt-44'>
+                <div id='bottom' className='h-auto' />
+                <img src={cert15} alt="Certificate 15" className='h-auto w-full' />
+                <img src={cert14} alt="Certificate 14" className='h-auto w-full' />
+                <img src={cert13} alt="Certificate 13" className='h-auto w-full' />
+                <img src={cert07} alt="Certificate 7" className='h-auto w-full' />
+                <img src={cert08} alt="Certificate 8" className='h-auto w-full' />
+                <img src={cert09} alt="Certificate 9" className='h-auto w-full' />
+                <img src={cert10} alt="Certificate 10" className='h-auto w-full' />
+                <img src={cert11} alt="Certificate 11" className='h-auto w-full' />
+                <img src={cert12} alt="Certificate 12" className='h-auto w-full' />
               </div>
             </div>
           </div>

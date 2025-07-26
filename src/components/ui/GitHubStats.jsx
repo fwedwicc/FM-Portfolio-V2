@@ -26,7 +26,7 @@ const GitHubStats = ({ username }) => {
   if (!stats) return <p>Loading GitHub stats...</p>
 
   return (
-    <div className='grid md:grid-cols-3 grid-cols-1 pt-2 gap-3'>
+    <div className='grid md:grid-cols-3 grid-cols-1 pt-2 gap-6'>
       {/* Contributions */}
       <div className='flex flex-col items-center justify-center gap-1'>
         <div className='p-4 grid place-content-center'>
@@ -34,7 +34,7 @@ const GitHubStats = ({ username }) => {
           <h1 className='text-lg leading-none text-center'>commits</h1>
         </div>
         <h5>contributions</h5>
-        <span className='text-xs text-indigo-100/70'>Oct 29, 2023 - Present</span>
+        <span className='text-xs text-indigo-100/70 text-center'>Oct 29, 2023 - Present</span>
       </div>
       {/* Current Streak */}
       <div className='flex flex-col items-center gap-1'>
@@ -48,7 +48,7 @@ const GitHubStats = ({ username }) => {
           </div>
         </div>
         <h5>current streak</h5>
-        <span className='text-xs text-indigo-100/70'>{formatDate(stats.currentStreak.startDate)} - {formatDate(stats.currentStreak.endDate)}</span>
+        <span className='text-xs text-indigo-100/70 text-center'>{formatDate(stats.currentStreak.startDate)} - {formatDate(stats.currentStreak.endDate)}</span>
       </div>
       {/* Longest Streak */}
       <div className='flex flex-col items-center justify-center gap-1'>
@@ -57,7 +57,7 @@ const GitHubStats = ({ username }) => {
           <h1 className='text-lg leading-none text-center'>days</h1>
         </div>
         <h5>longest streak</h5>
-        <span className='text-xs text-indigo-100/70'>{formatDate(stats.longestStreak.startDate)} - {formatDate(stats.longestStreak.endDate)}</span>
+        <span className='text-xs text-indigo-100/70 text-center'>{formatDate(stats.longestStreak.startDate)} - {formatDate(stats.longestStreak.endDate)}</span>
       </div>
     </div>
   )
