@@ -1,7 +1,7 @@
 import React from 'react'
 import { FaBehance, FaDribbble, FaLinkedinIn, FaGithub } from "react-icons/fa"
 import { FMLogo } from '../assets'
-import { HeroGrid, HeroGlow, CenterDot } from '../assets/hero'
+import { HeroGlow, CenterDot } from '../assets/hero'
 import { Button } from '../components/ui'
 import { SideDot } from '../assets/about'
 

@@ -2,12 +2,15 @@ import React from 'react'
 import { Button } from './ui'
 import { FMLogo } from '../assets'
 import { CertificationsGlow } from '../assets/experience'
+import { CenterDot } from '../assets/hero'
 import { TbPhone, TbMail, TbMapPin, TbArrowUpRight } from "react-icons/tb"
 
 const Contact = () => {
 
   return (
     <section className='relative h-auto md:pt-24 pt-9 space-y-16 border border-orange-500/20' id='contact'>
+      {/* Dot Pattern */}
+      <img src={CenterDot} alt="Dot Pattern" className='-z-10 absolute w-auto bottom-36 transform -translate-x-1/2 left-1/2 opacity-40' />
       {/* Content */}
       <div className='w-full flex justify-between items-end md:px-36 px-6'>
         {/* Left Contents */}
@@ -34,18 +37,21 @@ const Contact = () => {
       </div>
       {/* Footer */}
       <footer id='contact-footer' className='h-auto w-full px-6'>
-        <div className='overflow-hidden relative px-[1.5px] pt-[1.5px] footer-container-glow w-full rounded-t-4xl'>
+        <div className='overflow-hidden relative px-[1px] pt-[1px] footer-container-glow w-full rounded-t-4xl'>
           {/* Glow Try */}
           <img src={CertificationsGlow} alt="Glow" className='absolute left-0 w-full h-full scale-x-[-1]' />
           <div className='flex justify-between bg-[#17151E] w-full h-full rounded-t-4xl md:px-30 px-2 md:py-16 py-9'>
             {/* Left Content */}
             <div className='flex flex-col gap-8 z-20'>
               {/* Logo */}
-              <div className='size-[120px] rounded-[33px] p-[2px] bg-gradient-to-b from-[#BFADEF] to-[#4F46E5] shadow-2xl shadow-indigo-500/20 z-10'>
-                <div className='grid place-content-center w-full h-full bg-[#191726] rounded-[32px]'>
-                  <img src={FMLogo} alt="FM Logo" className='w-[40px] h-auto' />
+              <div className='size-[120px] rounded-[30px] p-[1px] bg-gradient-to-b from-[#BFADEF] to-[#4F46E5] shadow-2xl shadow-indigo-500/20 z-10'>
+                <div className='grid place-content-center w-full h-full bg-[#191726] rounded-[29px]'>
+                  <img src={FMLogo} alt="FM Logo" className='w-[34px] h-auto' />
                 </div>
               </div>
+              {/* <div className='size-[120px] rounded-[33px] border border-[#1d1b28] grid place-content-center'>
+                <img src={FMLogo} alt="FM Logo" className='w-[40px] h-auto' />
+              </div> */}
               <div className='space-y-1'>
                 <span className='flex items-center gap-1 group'>
                   <h2 id='text-animation'>FM © 2025</h2>

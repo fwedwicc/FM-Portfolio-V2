@@ -2,6 +2,7 @@ import React from 'react'
 import { BCPLogo, QCULogo, TechCommrLogo, BehanceLogo, CertificationsGlow } from '../assets/experience'
 import { cert01, cert02, cert03, cert04, cert05, cert06, cert07, cert08, cert09, cert10, cert11, cert12, cert13, cert14, cert15 } from '../assets/certifications'
 import { Button } from './ui'
+import { SideDot } from '../assets/about'
 
 const Experience = () => {
 
@@ -88,7 +89,9 @@ const Experience = () => {
 
   const Certifications = () => {
     return (
-      <div className='flex justify-center'>
+      <div className='border relative flex justify-center'>
+        {/* Dot Pattern */}
+        <img src={SideDot} alt="Dot Pattern" className='z-10 absolute w-auto -top-28 transform -translate-x-1/2 left-1/2 -rotate-90 opacity-20' />
         <div id='exp-certs' className='md:h-94 h-[20rem] w-full md:px-6 px-4'>
           <div className='md:p-[1.5px] p-[1px] h-full certis-container-glow rounded-4xl'>
             <div className='relative bg-[#15131C] w-full h-full rounded-[31px] grid md:grid-cols-2 grid-cols-1 overflow-hidden'>
