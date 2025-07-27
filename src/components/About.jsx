@@ -1,6 +1,6 @@
 import React from 'react'
 import { TbVector, TbCode, TbPiano, TbPencil, TbKeyboard } from "react-icons/tb"
-import { ProfileBlur } from '../assets/about'
+import { ProfileBlur, SideDot } from '../assets/about'
 
 const About = () => {
 
@@ -11,6 +11,8 @@ const About = () => {
         <div className={`absolute w-14 h-[170%] bg-indigo-600 opacity-0 group-hover:opacity-90 blur-[5rem] -translate-y-1/2 top-1/2 transition-smooth delay-100 pointer-events-none ${variant === 'left' ? 'left-[-9.5rem]' : 'right-[-9.5rem]'}`}></div>
         {/* Glow 3 - Outer */}
         <div className={`absolute w-10 h-[50%] bg-indigo-400 opacity-0 group-hover:opacity-90 blur-[2.5rem] -translate-y-1/2 top-1/2 transition-smooth delay-100 pointer-events-none ${variant === 'left' ? 'left-[-12rem]' : 'right-[-12rem]'}`}></div>
+        {/* Dot Pattern */}
+        <img src={SideDot} alt="Dot Pattern" className={`-z-10 absolute opacity-0 group-hover:opacity-50 -translate-y-1/2 top-1/2 transition-smooth delay-100 pointer-events-none  ${variant === 'left' ? 'left-[-12rem]' : 'right-[-12rem] scale-x-[-1]'}`} />
         {/* Glow Border */}
         <div className={`w-full h-full absolute top-0 left-0 -z-10 rounded-4xl opacity-0 group-hover:opacity-100 transition-smooth delay-150 ${variant === 'left' ? 'hero-left-glow' : 'hero-right-glow'}`}></div>
         {/* Content */}

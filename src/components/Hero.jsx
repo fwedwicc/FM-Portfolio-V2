@@ -1,8 +1,9 @@
 import React from 'react'
 import { FaBehance, FaDribbble, FaLinkedinIn, FaGithub } from "react-icons/fa"
 import { FMLogo } from '../assets'
-import { HeroGrid, HeroGlow } from '../assets/hero'
+import { HeroGrid, HeroGlow, CenterDot } from '../assets/hero'
 import { Button } from '../components/ui'
+import { SideDot } from '../assets/about'
 
 const Hero = () => {
 
@@ -46,11 +47,12 @@ const Hero = () => {
     <>
       <Header />
       <section className='h-screen' id='home'>
-        {/* Glow Effects */}
+        {/* Glow Effects & Dot Pattern */}
         <div className='bg-indigo-700 w-[10rem] h-12 absolute transform -top-8 rounded-full -translate-x-1/2 left-1/2 blur-2xl'></div>
         <img src={HeroGlow} alt="Glow" className='absolute w-auto top-0 transform -translate-x-1/2 left-1/2 z-10' />
-        {/* Grid */}
-        <img src={HeroGrid} alt="Grid" id='hero-grid' className='absolute md:w-[65rem] w-[20rem] h-auto -translate-y-1/2 top-1/2 -translate-x-1/2 left-1/2 -z-10' />
+        <img src={SideDot} alt="Glow" className='absolute w-auto -top-80 transform -translate-x-1/2 left-1/2 z-10 rotate-90 opacity-40' />
+        {/* Center Dot Pattern */}
+        <img src={CenterDot} alt="Grid" id='hero-grid' className='absolute w-auto h-auto -translate-y-1/2 top-1/2 -translate-x-1/2 left-1/2 -z-10 opacity-30' />
         <div className='relative flex flex-col items-center justify-center h-full md:gap-[40px] gap-[25px]'>
           {/* Extra Glow Effect */}
           <div className='md:h-[180px] h-[90px] md:w-[250px] w-[200px] absolute bg-indigo-700/40 md:mb-10 mb-14 rounded-b-[5rem] blur-xl'></div>
