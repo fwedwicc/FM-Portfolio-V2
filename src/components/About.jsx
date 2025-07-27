@@ -26,7 +26,7 @@ const About = () => {
         <GlowContainer id='about-left-container' variant='left' styles='lg:col-span-2 col-span-auto'>
           <div className='p-8 w-full h-full bg-[#15131C] rounded-[31px]'>
             <div className='space-y-4'>
-              <h2 id='text-animation'>who am i?</h2>
+              <h2 id='text-animation'>hello world, i am fred.</h2>
               <p id='text-animation'>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Amet delectus vitae quosorem, ipsum dolor sit amet consectetur adipisicing elit. Amet delectus vitae quos corem, ipsum dolor sit amet consectetur adipisicing elit. Amet delectus vitae quos corem, ipsum dolor sit amet consectetur adipisicing elit. Amet delectus vitae quos corem, ipsum dolor sit amet consectetur adipisicing elit. Amet delectus vitae quos corem, ipsum dolor sit amet consectetur adipisicing elit. Amet delectus vitae quos corem, ipsum dolor sit amet consectetur adipisicing elit. Amet delectus vitae quos corem, ipsum dolor sit amet consectetur adipisicing elit. Amet delectus vitae quos c culpa, porro reiciendis cumque quasi.</p>
             </div>
           </div>
@@ -35,7 +35,7 @@ const About = () => {
         <GlowContainer id='about-right-container' variant='right'>
           <div className='relative w-full lg:h-full h-64 bg-[#15131C] rounded-[31px] overflow-hidden'>
             {/* Image */}
-            <img src="https://avatars.githubusercontent.com/u/149291942?v=4" alt="Sample Profile" className='absolute top-0 left-0 object-cover w-full h-full opacity-40' />
+            <img src="https://i.pinimg.com/736x/65/a1/ec/65a1ecb4cf1110fd1c5e71be8ef7e696.jpg" alt="Sample Profile" className='absolute top-0 left-0 object-cover w-full h-full' />
             {/* Blur Effect */}
             {/* <img src={ProfileBlur} alt="Profile Blur Effect" className='absolute w-[80%] -bottom-24 z-50 border border-green-500' /> */}
             {/* Content */}

@@ -1,13 +1,37 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
+import { motion, AnimatePresence } from 'framer-motion'
 
-const Loader = ({ loading }) => {
+const Loader = () => {
+  const [visible, setVisible] = useState(true)
+
+  useEffect(() => {
+    document.body.style.overflow = 'hidden'
+
+    const timer = setTimeout(() => {
+      setVisible(false)
+      document.body.style.overflow = ''
+    }, 4000)
+
+    return () => {
+      clearTimeout(timer)
+      document.body.style.overflow = ''
+    }
+  }, [])
+
   return (
-    <div
-      className={`fixed inset-0 z-[9999] bg-[#191726] flex items-center justify-center transition-opacity duration-700 ${loading ? 'opacity-100 pointer-events-auto' : 'opacity-0 pointer-events-none'
-        }`}
-    >
-      <div className="animate-spin rounded-full h-16 w-16 border-4 border-indigo-500 border-t-transparent"></div>
-    </div>
+    <AnimatePresence>
+      {visible && (
+        <motion.div
+          initial={{ opacity: 1 }}
+          animate={{ opacity: 1 }}
+          exit={{ opacity: 0 }}
+          transition={{ duration: 0.5 }}
+          className="fixed inset-0 bg-[#15131C] text-white z-[9999] grid place-items-center"
+        >
+          <h1 className="text-2xl font-bold animate-pulse">Loading...</h1>
+        </motion.div>
+      )}
+    </AnimatePresence>
   )
 }
 
