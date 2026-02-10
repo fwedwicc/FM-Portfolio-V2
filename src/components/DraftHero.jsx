@@ -5,7 +5,7 @@ import { HeroGlow, CenterDot } from '../assets/hero'
 import { Button } from '../components/ui'
 import { SideDot } from '../assets/about'
 
-const Hero = () => {
+const DraftHero = () => {
 
   // Header Component
   const Header = () => {
@@ -44,30 +44,30 @@ const Hero = () => {
   }
 
   return (
-    <>
+    <section className='h-screen p-1.5 overflow-hidden relative' id='home'>
       <Header />
-      <section className='h-screen' id='home'>
+      <div className='bg-neutral-950 h-full rounded-3xl border-4 border-indigo-600 overflow-hidden relative'>
         {/* Glow Effects & Dot Pattern */}
         <div className='bg-indigo-700 w-[10rem] h-12 absolute transform -top-8 rounded-full -translate-x-1/2 left-1/2 blur-2xl'></div>
         <img src={HeroGlow} alt="Glow" className='absolute w-auto top-0 transform -translate-x-1/2 left-1/2 z-10' />
         <img src={SideDot} alt="Glow" className='absolute w-auto -top-80 transform -translate-x-1/2 left-1/2 z-10 rotate-90 opacity-40' />
         {/* Center Dot Pattern */}
-        <img src={CenterDot} alt="Grid" id='hero-grid' className='absolute w-auto h-auto -translate-y-1/2 top-1/2 -translate-x-1/2 left-1/2 -z-10 opacity-30' />
+        <img src={CenterDot} alt="Grid" id='hero-grid' className='absolute w-auto h-auto -translate-y-1/2 top-1/2 -translate-x-1/2 left-1/2 z-10 opacity-30' />
         <div className='relative flex flex-col items-center justify-center h-full md:gap-[40px] gap-[25px]'>
           {/* Extra Glow Effect */}
-          <div className='md:h-[180px] h-[90px] md:w-[250px] w-[200px] absolute bg-indigo-700/40 md:mb-10 mb-14 rounded-b-[5rem] blur-xl'></div>
+          <div className='md:h-[180px] h-[90px] md:w-[250px] w-[200px] absolute bg-indigo-600/10 md:mb-10 mb-14 rounded-b-[5rem] blur-xl'></div>
           {/* Logo */}
           <div id='hero-logo' className='md:size-[250px] size-[190px] md:rounded-[60px] rounded-[45px] p-[2px] bg-gradient-to-b from-[#BFADEF] to-[#4F46E5] overflow-hidden z-10'>
-            <div className='grid place-content-center w-full h-full bg-[#191726] md:rounded-[59px] rounded-[44px]'>
+            <div className='grid place-content-center w-full h-full bg-neutral-950 md:rounded-[59px] rounded-[44px]'>
               <img src={FMLogo} alt="FM Logo" className='md:w-[60px] size-[45px] h-auto' />
             </div>
           </div>
           {/* Heading */}
           <h1 id='hero-heading-1' className='md:text-[60px] text-[45px] text-center'>i design and build</h1>
         </div>
-      </section>
-    </>
+      </div>
+    </section>
   )
 }
 
-export default Hero
+export default DraftHero

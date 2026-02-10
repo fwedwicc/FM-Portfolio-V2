@@ -2,27 +2,31 @@ import React, { useEffect, useState } from 'react'
 import { motion } from 'framer-motion'
 import useLenis from '../hooks/useLenis.js'
 import useGsapAnimations from '../hooks/useGsapAnimations.js'
-import { Sidebar, Hero, About, Experience, Expertise, Project, Contact, Loader } from '../components'
+import { DraftHero } from '../components'
 
-const Home = () => {
+const Draft = () => {
 
   useLenis()
   useGsapAnimations()
 
   return (
-    <div className='bg-[#15131C]'>
+    <>
       {/* <Loader /> */}
-      <Sidebar />
-      <main>
-        <Hero />
-        <About />
+      {/* <Sidebar /> */}
+      <main className='bg-neutral-50'>
+        <DraftHero />
+        {/* Sample */}
+        <div className='h-screen bg-neutral-50'>
+
+        </div>
+        {/* <About />
         <Experience />
         <Expertise />
         <Project />
-        <Contact />
+        <Contact /> */}
       </main>
-    </div>
+    </>
   )
 }
 
-export default Home
+export default Draft

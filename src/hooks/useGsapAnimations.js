@@ -65,7 +65,7 @@ const useGsapAnimations = () => {
         scrollTrigger: {
           trigger: '#social-links',
           scrub: 1,
-          markers: false,
+          markers: true,
           start: 'top 0%',
           end: 'top -20%',
         },
@@ -82,27 +82,27 @@ const useGsapAnimations = () => {
         scrollTrigger: {
           trigger: '#CTAs',
           scrub: 1,
-          markers: false,
+          markers: true,
           start: 'top 0%',
           end: 'top -20%',
         },
       }
     )
-    // Disable ko muna nag lalag lappyyy
-    // gsap.fromTo(
-    //   '#hero-logo',
-    //   { scale: 1 },
-    //   {
-    //     scale: 2,
-    //     scrollTrigger: {
-    //       trigger: '#hero-logo',
-    //       start: 'top 20%',
-    //       end: 'top -120%',
-    //       scrub: 1,
-    //       markers: false
-    //     },
-    //   }
-    // )
+    // Hero Logo
+    gsap.fromTo(
+      '#hero-logo',
+      { scale: 1 },
+      {
+        scale: 2,
+        scrollTrigger: {
+          trigger: '#hero-logo',
+          start: 'top 20%',
+          end: 'top -120%',
+          scrub: 1,
+          markers: true
+        },
+      }
+    )
     // Tryyy hero grid
     // gsap.fromTo(
     //   '#hero-grid',
