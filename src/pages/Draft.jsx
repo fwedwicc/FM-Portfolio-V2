@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react'
 import { motion } from 'framer-motion'
 import useLenis from '../hooks/useLenis.js'
 import useGsapAnimations from '../hooks/useGsapAnimations.js'
-import { DraftHero } from '../components'
+import { DraftSidebar, DraftHero } from '../components'
 
 const Draft = () => {
 
@@ -12,7 +12,7 @@ const Draft = () => {
   return (
     <>
       {/* <Loader /> */}
-      {/* <Sidebar /> */}
+      <DraftSidebar />
       <main className='bg-neutral-50'>
         <DraftHero />
         {/* Sample */}

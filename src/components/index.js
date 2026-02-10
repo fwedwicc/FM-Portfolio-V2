@@ -8,6 +8,7 @@ import Project from './Project'
 import Contact from './Contact'
 
 import DraftHero from './DraftHero'
+import DraftSidebar from './DraftSidebar'
 
 export {
   Loader,
@@ -18,5 +19,6 @@ export {
   Expertise,
   Project,
   Contact,
-  DraftHero
+  DraftHero,
+  DraftSidebar
 }

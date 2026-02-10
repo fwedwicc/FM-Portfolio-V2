@@ -1,5 +1,6 @@
 import React from 'react'
 import { FaBehance, FaDribbble, FaLinkedinIn, FaGithub } from "react-icons/fa"
+import { PiStarFourFill } from "react-icons/pi"
 import { FMLogo } from '../assets'
 import { HeroGlow, CenterDot } from '../assets/hero'
 import { Button } from '../components/ui'
@@ -21,16 +22,20 @@ const DraftHero = () => {
               { icon: FaDribbble, link: 'https://dribbble.com/fwedwic' },
             ].map((item, index) => (
               <a href={item.link} target='_blank' rel='noopener noreferrer' className='grid place-items-center size-7 group rounded-md hover:bg-[#111017] transition-smooth' key={index}>
-                <item.icon className='size-4 group-hover:text-white text-indigo-100 transition-smooth' />
+                <item.icon className='size-4 group-hover:text-white text-neutral-100 transition-smooth' />
               </a>
             ))}
           </div>
-          {/* Credit */}
-          <div className='absolute -translate-x-1/2 left-1/2 md:visible invisible'>
-            <span className='text-indigo-100 text-xs'>FM © 2026</span>
+          {/* Interests */}
+          <div className='flex items-center gap-3 absolute -translate-x-1/2 left-1/2 md:visible invisible'>
+            <p className='text-neutral-300 text-bold text-xs'>frontend</p>
+            <PiStarFourFill className='size-2 text-neutral-50' />
+            <p className='text-neutral-300 text-bold text-xs'>ui/ux</p>
+            <PiStarFourFill className='size-2 text-neutral-50' />
+            <p className='text-neutral-300 text-bold text-xs'>visuals</p>
           </div>
           {/* CTAs */}
-          <div id='CTAs' className='flex gap-1 p-1 border border-[#262333] bg-[#15131C] rounded-[13px]'>
+          <div id='CTAs' className='flex gap-1 p-1 border border-neutral-800/70 bg-neutral-900/80 rounded-[13px]'>
             {/* Linktree */}
             <a href="https://fm-linktree.vercel.app" target='_blank' rel='noopener noreferrer'>
               <Button variant="secondary" label="Linktree" />
@@ -46,7 +51,7 @@ const DraftHero = () => {
   return (
     <section className='h-screen p-1.5 overflow-hidden relative' id='home'>
       <Header />
-      <div className='bg-neutral-950 h-full rounded-3xl border-4 border-indigo-600 overflow-hidden relative'>
+      <div className='bg-neutral-950 h-full rounded-3xl border-4 border-indigo-500 overflow-hidden relative'>
         {/* Glow Effects & Dot Pattern */}
         <div className='bg-indigo-700 w-[10rem] h-12 absolute transform -top-8 rounded-full -translate-x-1/2 left-1/2 blur-2xl'></div>
         <img src={HeroGlow} alt="Glow" className='absolute w-auto top-0 transform -translate-x-1/2 left-1/2 z-10' />
@@ -57,7 +62,7 @@ const DraftHero = () => {
           {/* Extra Glow Effect */}
           <div className='md:h-[180px] h-[90px] md:w-[250px] w-[200px] absolute bg-indigo-600/10 md:mb-10 mb-14 rounded-b-[5rem] blur-xl'></div>
           {/* Logo */}
-          <div id='hero-logo' className='md:size-[250px] size-[190px] md:rounded-[60px] rounded-[45px] p-[2px] bg-gradient-to-b from-[#BFADEF] to-[#4F46E5] overflow-hidden z-10'>
+          <div id='hero-logo' className='md:size-[250px] size-[190px] md:rounded-[60px] rounded-[45px] p-[2px] bg-gradient-to-b from-violet-200 to-indigo-500 overflow-hidden z-10'>
             <div className='grid place-content-center w-full h-full bg-neutral-950 md:rounded-[59px] rounded-[44px]'>
               <img src={FMLogo} alt="FM Logo" className='md:w-[60px] size-[45px] h-auto' />
             </div>
