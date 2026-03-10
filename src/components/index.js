@@ -8,6 +8,7 @@ import Project from './Project'
 import Contact from './Contact'
 
 import DraftHero from './DraftHero'
+import DraftHero2 from './DraftHero2'
 import DraftSidebar from './DraftSidebar'
 
 export {
@@ -20,5 +21,6 @@ export {
   Project,
   Contact,
   DraftHero,
+  DraftHero2,
   DraftSidebar
 }
